@@ -28,6 +28,11 @@
             line-height: 1.6;
         }
 
+        @keyframes bounce {
+            0%, 100% { opacity: 0.6; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(4px); }
+        }
+
         /* HERO */
         .hero {
             display: grid;
@@ -706,7 +711,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img id="photoImg" src="image1.jpeg" alt="Tiphaine Ducret">
+            <img id="photoImg" src="image4.png" alt="Tiphaine Ducret">
         </div>
 
         <!-- Barre de recadrage -->
@@ -752,6 +757,11 @@
             
             <!-- CARROUSEL DE CARTES -->
             <div style="position: relative; overflow: hidden;">
+                <!-- FLÈCHE POUR SKIPPER -->
+                <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 48px; font-weight: 700; animation: bounce 2s infinite; pointer-events: none; z-index: 10; text-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    →
+                </div>
+
                 <div id="cardsContainer" style="display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding: 10px 0;" draggable="false">
                     <!-- CARTE 1: Techniques -->
                     <div style="flex: 0 0 calc(50% - 10px); background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
@@ -810,8 +820,8 @@
             </div>
 
             <div class="semestre-buttons">
-                <button class="semestre-btn active" onclick="showSemestre('s1', this)">📚 S1 (2024-2025)</button>
-                <button class="semestre-btn" onclick="showSemestre('s2', this)">📚 S2 (2024-2025)</button>
+                <button class="semestre-btn active" onclick="showSemestre('s1', this)">📚 S1</button>
+                <button class="semestre-btn" onclick="showSemestre('s2', this)">📚 S2</button>
             </div>
 
             <!-- S1 -->
