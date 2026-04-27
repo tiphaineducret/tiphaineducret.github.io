@@ -1,1 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production de données en entreprise - Tiphaine Ducret</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2.5px solid #2563eb;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-size: 15px;
+        }
+
+        .meta-item {
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .meta-item strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2563eb;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .section h3 {
+            font-size: 16px;
+            color: #374151;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #1f2937;
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .skill-tag {
+            background: #f0f4ff;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #2563eb;
+        }
+
+        .highlight-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/#projects" class="back-link">← Retour au portfolio</a>
+
+        <div class="header">
+            <h1>🏢 Production de données en entreprise</h1>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>📅 Semestre</strong>
+                    1er semestre (novembre-décembre 2025)
+                </div>
+                <div class="meta-item">
+                    <strong>💼 Acquis Professionnels</strong>
+                    Analyse de données réelles, Communication des résultats
+                </div>
+                <div class="meta-item">
+                    <strong>⏱️ Temps estimé</strong>
+                    Plus de 30 heures
+                </div>
+                <div class="meta-item">
+                    <strong>📊 Niveau de difficulté</strong>
+                    Facile à moyen
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objectif du projet</h2>
+            <p>Analyser le "réarmement démographique" de la France en étudiant les territoires les plus jeunes et les plus féconds. En partant des données INSEE sur le Recensement 2022, il s'agissait de comprendre comment certaines communes présentent des niveaux de natalité exceptionnels, et comment cette jeunesse se traduit (ou non) en opportunités économiques. Le projet requérait de produire, analyser et valoriser des données volumineuses et complexes sous la forme d'un rapport professionnel structuré.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Compétences mises en œuvre</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>Recherche et extraction de données dans des bases de données complexes (INSEE)</li>
+                <li>Production d'indicateurs statistiques pertinents (tendance centrale, dispersion, ratios)</li>
+                <li>Analyse statistique descriptive appliquée à un contexte réel</li>
+                <li>Visualisation de données (graphiques, tableaux, représentations pertinentes)</li>
+                <li>Communication des résultats à travers un rapport professionnel rigoureux</li>
+                <li>Structuration et synthèse d'une grande masse d'information</li>
+                <li>Mise en forme professionnelle et charte graphique cohérente</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📊 Résultats & Livrables</h2>
+            <p>Un rapport professionnel complet de 8 pages analysant 30 communes à très haute natalité. Le rapport comprend une introduction contextualisée, une analyse démographique (évolution, structure par âge, composition socio-professionnelle, ratios de dépendance), une analyse du chômage départemental avec décomposition par âge et diplôme, et une conclusion structurée. Les données sont présentées via des graphiques pertinents, des tableaux clairs et une charte graphique homogène. Les indicateurs ont été calculés avec précision et les commentaires font "parler les données".</p>
+        </div>
+
+        <div class="section">
+            <h2>✨ Apprentissages clés</h2>
+            <p>J'ai découvert la puissance de la statistique descriptive appliquée à des enjeux réels et sociétalement importants. Savoir transformer une grande masse de données brutes en informations pertinentes et accessibles est une compétence clé. J'ai appris à utiliser les indicateurs de tendance centrale et de dispersion pour raconter une histoire avec les données. Cette SAé m'a aussi montré l'importance de la rigueur méthodologique et de la clarté de la communication dans un contexte professionnel.</p>
+        </div>
+
+        <div class="section">
+            <h2>❤️ Ce que j'ai aimé</h2>
+            <p>J'ai absolument adoré cette expérience ! Utiliser mes compétences en statistiques descriptives sur des données réelles et complexes, c'était vraiment gratifiant. Le moment où les indicateurs et graphiques commençaient à faire sens, quand on voyait comment la natalité élevée ne garantissait pas automatiquement la croissance économique, ça a été magique. J'ai aimé aussi la liberté d'explorer les données, de poser mes propres questions et d'y répondre par l'analyse. C'était une vraie immersion dans le métier de data analyst. Ce type de travail m'a vraiment montré que j'aimerais poursuivre mes études dans cette direction, peut être vers l'analyse socio économique ou les sciences humaines computationnelles.</p>
+        </div>
+
+        <div class="section">
+            <h2>😟 Défis rencontrés</h2>
+            <p>Le principal défi a été de synthétiser une énorme quantité d'information sans perdre la pertinence. Choisir les bons indicateurs, les bons graphiques, et surtout trouver les bons angles pour expliquer les données, ce n'était pas évident. J'ai dû faire plusieurs allers et retours sur la structure du rapport. Un autre défi : interpréter correctement les indicateurs, comme le ratio de dépendance, demande une vraie compréhension statistique, pas juste une application mécanique de formules.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>💬 Retour du professeur :</strong><br><br>
+            "Vous avez réussi à faire parler vos données et à synthétiser une grande masse d'information. Le document est bien structuré avec des titres orientés et percutants. Vos indicateurs ont été calculés avec justesse et précision. Les graphiques sont pertinents et adaptés aux données. La mobilisation des outils vus en statistique descriptive est très satisfaisante."
+        </div>
+
+        <div class="section" style="background: #f0f4ff; border: 2px solid #2563eb;">
+            <h2 style="border-bottom: 2px solid #2563eb;">📄 Rapport complet</h2>
+            <p>Découvre le rapport professionnel complet de cette analyse du réarmement démographique.</p>
+            
+            <!-- Aperçu cliquable -->
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px;">
+                <a href="rapport-demographic.pdf" target="_blank" style="display: inline-block; cursor: pointer;">
+                    <img src="rapport-preview.jpg" alt="Aperçu du rapport" style="max-width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); border: 2px solid #2563eb; transition: transform 0.2s; cursor: pointer;">
+                </a>
+                
+                <!-- Bouton de téléchargement -->
+                <a href="rapport-demographic.pdf" download="Rearmement-Demographique-Rapport.pdf" class="cta-button" style="background: #10b981; display: inline-block;">⬇️ Télécharger le rapport (PDF)</a>
+            </div>
+            
+            <p style="font-size: 12px; color: #6b7280; margin-top: 16px;">Cliquez sur l'aperçu pour voir le rapport complet</p>
+        </div>
+    </div>
+</body>
+</html>
