@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en œuvre d'une enquête - Tiphaine Ducret</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .back-link {
+            display: inline-block; margin-bottom: 30px;
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .header {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2.5px solid #2563eb; border-radius: 16px;
+            padding: 40px; margin-bottom: 40px;
+        }
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
+        .section {
+            background: white; border: 1px solid #e5e7eb;
+            border-radius: 12px; padding: 30px; margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 18px; color: #1f2937; margin-bottom: 16px;
+            padding-bottom: 12px; border-bottom: 2px solid #2563eb;
+            font-weight: 700; letter-spacing: 0.3px;
+        }
+        .section p {
+            font-size: 15px; line-height: 1.8; margin-bottom: 12px;
+            color: #4b5563; text-align: justify;
+        }
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; color: #1f2937; }
+        .highlight-box {
+            background: #fffbeb; border-left: 4px solid #f59e0b;
+            padding: 16px; border-radius: 8px; margin: 20px 0;
+            font-size: 15px; line-height: 1.8;
+        }
+        .cta-button {
+            display: inline-block; background: #2563eb; color: white;
+            padding: 12px 24px; border-radius: 8px; text-decoration: none;
+            font-weight: 500; margin-top: 20px; transition: background 0.3s;
+        }
+        .cta-button:hover { background: #1e40af; }
+        .preview-img {
+            max-width: 220px; height: auto; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            border: 2px solid #2563eb; transition: transform 0.2s; cursor: pointer;
+            display: block;
+        }
+        .preview-img:hover { transform: scale(1.03); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/#projects" class="back-link">← Retour au portfolio</a>
 
+    <div class="header">
+        <h1>📊 Mise en œuvre d'une enquête</h1>
+        <div class="meta">
+            <div class="meta-item">
+                <strong>📅 Semestre</strong>
+                1er semestre (novembre 2025)
+            </div>
+            <div class="meta-item">
+                <strong>💼 Acquis professionnels</strong>
+                Conception d'enquête, Méthodologie
+            </div>
+            <div class="meta-item">
+                <strong>⏱️ Temps estimé</strong>
+                4 à 5 heures
+            </div>
+            <div class="meta-item">
+                <strong>📊 Niveau de difficulté</strong>
+                Facile
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Objectif du projet</h2>
+        <p>Concevoir et mettre en œuvre une enquête complète auprès des jeunes sur le thème "Les jeunes et les réseaux sociaux". L'objectif était de comprendre comment les réseaux sociaux influencent les comportements et l'engagement des jeunes avec les marques. Il fallait maîtriser toute la chaîne de l'enquête : de la problématique initiale à la construction du questionnaire, en passant par le cahier des charges et l'organigramme.</p>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Compétences mises en œuvre</h2>
+        <ul>
+            <li>Compréhension des fondamentaux d'une enquête (QQOQCCP)</li>
+            <li>Rédaction d'une problématique et contextualisation du sujet</li>
+            <li>Construction d'un cahier des charges détaillé</li>
+            <li>Élaboration d'un organigramme logique du questionnaire</li>
+            <li>Conception de questions fermées avec logiques de routage</li>
+            <li>Respect des bonnes pratiques méthodologiques</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📋 Résultats & Livrables</h2>
+        <p>Un dossier complet comprenant quatre éléments structurés. D'abord, une présentation contextuelle du thème "Les jeunes et les réseaux sociaux" appuyée sur des sources fiables (OMS, études européennes). Ensuite, un cahier des charges détaillé utilisant la méthode QQOQCCP, classant les données à collecter en quatre grandes catégories : descripteurs socio-démographiques, usages des réseaux, raisons d'utilisation et engagement avec les marques. Puis un organigramme complet montrant la structure logique et les routages. Enfin, le questionnaire lui-même comprenant une vingtaine de questions fermées avec logiques conditionnelles, réalisé avec un outil en ligne.</p>
+    </div>
+
+    <div class="section">
+        <h2>✨ Apprentissages clés</h2>
+        <p>Ce projet m'a appris à construire une enquête de façon méthodique et rigoureuse. J'ai découvert l'importance de bien cadrer une enquête dès le départ avec le cahier des charges, pour que chaque question ait un vrai sens. La méthode QQOQCCP m'a montré comment structurer ma pensée. J'ai aussi compris que la logique de routage est essentielle pour ne pas poser de questions hors de propos selon les réponses précédentes.</p>
+    </div>
+
+    <div class="section">
+        <h2>❤️ Ce que j'ai aimé</h2>
+        <p>J'ai vraiment apprécié l'aspect progressif du projet. Les cours en amont ont rendu la pratique beaucoup plus fluide. J'ai aimé l'étape de création du cahier des charges, qui est le vrai cœur du travail. Concevoir le questionnaire a été gratifiant, surtout en voyant comment les routages le rendaient intelligent et adaptatif. C'était aussi intéressant d'étudier un sujet que je connais bien et de le transformer en démarche professionnelle.</p>
+    </div>
+
+    <div class="section">
+        <h2>😟 Défis rencontrés</h2>
+        <p>Le principal défi a été de trouver l'équilibre entre poser assez de questions pour répondre à la problématique sans surcharger le répondant. Il fallait aussi penser les routages intelligemment pour que le questionnaire s'adapte à chaque profil. Classer les informations dans les bonnes catégories du cahier des charges a demandé de la réflexion, notamment pour bien distinguer usages et motivations. Veiller à ce que chaque question soit fermée imposait aussi d'anticiper toutes les réponses possibles à l'avance.</p>
+    </div>
+
+    <div class="highlight-box">
+        <strong>📚 Les cours magistraux de préparation :</strong><br><br>
+        Le projet était précédé de cours couvrant les fondamentaux de l'enquête : qu'est-ce qu'une enquête, pourquoi c'est utile en entreprise, comment la construire étape par étape, les erreurs à éviter. Ces apports théoriques ont vraiment aidé à comprendre le contexte et les enjeux avant de passer à la pratique.
+    </div>
+
+    <div class="section" style="background: #f0f4ff; border: 2px solid #2563eb;">
+        <h2 style="border-bottom: 2px solid #2563eb;">📄 Dossier complet</h2>
+        <p>Le dossier comprend la présentation du sujet, le cahier des charges (QQOQCCP), l'organigramme du questionnaire et le questionnaire exporté.</p>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 20px;">
+            <a href="enquete-reseaux-sociaux.pdf" target="_blank">
+                <img src="enquete-preview.jpg" alt="Aperçu du dossier enquête" class="preview-img">
+            </a>
+            <a href="enquete-reseaux-sociaux.pdf" download="Enquete-Reseaux-Sociaux-Dossier.pdf" class="cta-button" style="background: #10b981;">⬇️ Télécharger le dossier (PDF)</a>
+        </div>
+        <p style="font-size: 12px; color: #6b7280; margin-top: 16px;">Cliquez sur l'aperçu pour voir le dossier complet</p>
+    </div>
+</div>
+</body>
+</html>
