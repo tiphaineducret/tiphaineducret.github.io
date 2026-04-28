@@ -1031,6 +1031,13 @@
 
         document.addEventListener('DOMContentLoaded', initCarousel);
 
+        // Détection du semestre à afficher selon l'URL
+        if (window.location.hash === '#s2') {
+            const s2btn = document.querySelectorAll('.semestre-btn')[1];
+            showSemestre('s2', s2btn);
+            document.getElementById('projects').scrollIntoView();
+        }
+
         function showSemestre(semestre, button) {
             document.getElementById('s1-projects').style.display = 'none';
             document.getElementById('s2-projects').style.display = 'none';
