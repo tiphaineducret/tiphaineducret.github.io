@@ -139,7 +139,6 @@
             transition: transform 0.1s ease-out;
         }
 
-        /* Barre de recadrage */
         .crop-controls {
             margin-top: 15px;
             padding: 15px;
@@ -236,22 +235,15 @@
             transition: width 0.3s;
         }
 
-        nav a:hover {
-            color: var(--primary-blue);
-        }
+        nav a:hover { color: var(--primary-blue); }
+        nav a:hover::after { width: 100%; }
 
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* CONTAINER */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* SECTIONS */
         section {
             padding: 100px 0;
             border-bottom: 1px solid rgba(124, 58, 237, 0.15);
@@ -263,9 +255,7 @@
             border: 1px solid rgba(124, 58, 237, 0.2);
         }
 
-        section:last-of-type {
-            border-bottom: 1px solid rgba(124, 58, 237, 0.2);
-        }
+        section:last-of-type { border-bottom: 1px solid rgba(124, 58, 237, 0.2); }
 
         h2 {
             font-size: 2.5rem;
@@ -287,11 +277,8 @@
             border-radius: 2px;
         }
 
-        #skills h2 {
-            font-size: 3.2rem;
-        }
+        #skills h2 { font-size: 3.2rem; }
 
-        /* COMPÉTENCES */
         .skills-section {
             background: var(--white);
             padding: 40px;
@@ -299,9 +286,7 @@
             border: 1px solid var(--border);
         }
 
-        .skills-category {
-            margin-bottom: 40px;
-        }
+        .skills-category { margin-bottom: 40px; }
 
         .skills-category h3 {
             font-size: 1.3rem;
@@ -310,9 +295,7 @@
             font-weight: 700;
         }
 
-        .skill-row {
-            margin-bottom: 20px;
-        }
+        .skill-row { margin-bottom: 20px; }
 
         .skill-label {
             display: flex;
@@ -321,10 +304,7 @@
             font-weight: 600;
         }
 
-        .skill-level-text {
-            color: var(--primary-blue);
-            font-size: 0.9rem;
-        }
+        .skill-level-text { color: var(--primary-blue); font-size: 0.9rem; }
 
         .skill-bar {
             background: #F3E8FF;
@@ -363,7 +343,6 @@
             border-color: var(--primary-blue);
         }
 
-        /* PROJETS */
         .projects-intro {
             background: var(--white);
             padding: 30px;
@@ -395,9 +374,7 @@
             transition: all 0.3s;
         }
 
-        .semestre-btn:hover {
-            background: #f0f4ff;
-        }
+        .semestre-btn:hover { background: #f0f4ff; }
 
         .semestre-btn.active {
             background: linear-gradient(135deg, var(--primary-blue), var(--primary-violet));
@@ -436,9 +413,7 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .project-body {
-            padding: 25px;
-        }
+        .project-body { padding: 25px; }
 
         .project-body h4 {
             font-size: 1.2rem;
@@ -478,11 +453,8 @@
             transition: all 0.3s;
         }
 
-        .project-link:hover {
-            color: var(--primary-violet);
-        }
+        .project-link:hover { color: var(--primary-violet); }
 
-        /* PARCOURS */
         .parcours-text {
             background: var(--white);
             padding: 40px;
@@ -512,9 +484,7 @@
             transition: all 0.3s;
         }
 
-        .engagement-card:nth-child(even) {
-            border-left-color: var(--primary-violet);
-        }
+        .engagement-card:nth-child(even) { border-left-color: var(--primary-violet); }
 
         .engagement-card:hover {
             transform: translateY(-5px);
@@ -541,7 +511,6 @@
             line-height: 1.6;
         }
 
-        /* BILAN */
         .bilan-content {
             background: var(--white);
             padding: 40px;
@@ -559,7 +528,6 @@
             font-weight: 600;
         }
 
-        /* CV */
         .cv-content {
             background: var(--white);
             padding: 40px;
@@ -586,7 +554,6 @@
             box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
         }
 
-        /* FOOTER */
         footer {
             background: var(--white);
             padding: 50px;
@@ -595,9 +562,7 @@
             color: var(--light-text);
         }
 
-        footer p {
-            margin-bottom: 12px;
-        }
+        footer p { margin-bottom: 12px; }
 
         footer a {
             color: var(--primary-blue);
@@ -606,74 +571,26 @@
             transition: color 0.3s;
         }
 
-        footer a:hover {
-            color: var(--primary-violet);
-        }
+        footer a:hover { color: var(--primary-violet); }
 
-        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 60px 40px;
-                gap: 40px;
-            }
-
-            nav {
-                padding: 20px 40px;
-                gap: 20px;
-            }
-
-            .container {
-                padding: 0 40px;
-            }
-
-            .hero-image {
-                height: 400px;
-            }
+            .hero { grid-template-columns: 1fr; padding: 60px 40px; gap: 40px; }
+            nav { padding: 20px 40px; gap: 20px; }
+            .container { padding: 0 40px; }
+            .hero-image { height: 400px; }
         }
 
         @media (max-width: 640px) {
-            .hero {
-                padding: 40px 20px;
-            }
-
-            nav {
-                padding: 15px 20px;
-                gap: 15px;
-            }
-
-            .container {
-                padding: 0 20px;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-meta {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .semestre-buttons {
-                flex-direction: column;
-            }
-
-            .semestre-btn {
-                width: 100%;
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
+            .hero { padding: 40px 20px; }
+            nav { padding: 15px 20px; gap: 15px; }
+            .container { padding: 0 20px; }
+            h2 { font-size: 2rem; }
+            section { padding: 60px 0; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-meta { flex-direction: column; gap: 15px; }
+            .semestre-buttons { flex-direction: column; }
+            .semestre-btn { width: 100%; }
+            .projects-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -716,28 +633,14 @@
             <img id="photoImg" src="image4.png" alt="Tiphaine Ducret">
         </div>
 
-        <!-- Barre de recadrage -->
         <div class="crop-controls">
             <label for="photoInput" class="crop-label">📷 Choisir ta photo :</label>
-            <input 
-                type="file" 
-                id="photoInput" 
-                accept="image/*"
-                onchange="loadPhoto(event)"
-                style="margin-bottom: 15px; padding: 8px; border: 1px solid var(--border); border-radius: 6px; width: 100%;"
-            >
-            
+            <input type="file" id="photoInput" accept="image/*" onchange="loadPhoto(event)"
+                style="margin-bottom: 15px; padding: 8px; border: 1px solid var(--border); border-radius: 6px; width: 100%;">
             <label for="cropSlider" class="crop-label">⬆️⬇️ Monter / Descendre la photo</label>
             <div class="slider-container">
-                <input 
-                    type="range" 
-                    id="cropSlider" 
-                    min="-30" 
-                    max="30" 
-                    value="0"
-                    onchange="adjustCrop(this.value)"
-                    oninput="adjustCrop(this.value)"
-                >
+                <input type="range" id="cropSlider" min="-30" max="30" value="0"
+                    onchange="adjustCrop(this.value)" oninput="adjustCrop(this.value)">
                 <span class="slider-value" id="cropValue">➡️ 0</span>
             </div>
         </div>
@@ -756,16 +659,9 @@
         <!-- COMPÉTENCES -->
         <section id="skills">
             <h2>Compétences techniques</h2>
-            
-            <!-- CARROUSEL DE CARTES -->
             <div style="position: relative; overflow: hidden;">
-                <!-- FLÈCHE POUR SKIPPER -->
-                <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 48px; font-weight: 700; animation: bounce 2s infinite; pointer-events: none; z-index: 10; text-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                    →
-                </div>
-
+                <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 48px; font-weight: 700; animation: bounce 2s infinite; pointer-events: none; z-index: 10; text-shadow: 0 2px 8px rgba(0,0,0,0.1);">→</div>
                 <div id="cardsContainer" style="display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding: 10px 0;" draggable="false">
-                    <!-- CARTE 1: Techniques -->
                     <div style="flex: 0 0 calc(45% - 10px); min-width: 0; background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #1e40af; margin-bottom: 32px; letter-spacing: 0.3px;">Langages de programmation</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
@@ -777,19 +673,15 @@
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937;"><strong style="color: #1e40af; font-size: 16px;">HTML & CSS</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Création de sites web responsifs - mon portfolio en est l'exemple</span></div>
                         </div>
                     </div>
-
-                    <!-- CARTE 2: Outils -->
                     <div style="flex: 0 0 calc(45% - 10px); background: linear-gradient(135deg, #faf5ff 0%, #f5f0ff 100%); border: 2.5px solid #7c3aed; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #6d28d9; margin-bottom: 32px; letter-spacing: 0.3px;">Outils & logiciels</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.1);"><strong style="color: #6d28d9; font-size: 15px;">Excel & Google Sheets</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Analyse, tableaux de synthèse et visualisations simples</span></div>
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.1);"><strong style="color: #6d28d9; font-size: 15px;">Power BI</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Tableaux de bord interactifs pour la restitution d'analyses</span></div>
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.1);"><strong style="color: #6d28d9; font-size: 15px;">MySQL & phpMyAdmin</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Gestion et administration de bases de données relationnelles</span></div>
-                            <div style="line-height: 1.8; font-size: 15px; color: #1f2937;"><strong style="color: #6d28d9; font-size: 15px;">Sphinx</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Visualisation et exploration des données</span></div>
+                            <div style="line-height: 1.8; font-size: 15px; color: #1f2937;"><strong style="color: #6d28d9; font-size: 15px;">Sphinx</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Conception et diffusion de questionnaires d'enquête</span></div>
                         </div>
                     </div>
-
-                    <!-- CARTE 3: Analytiques -->
                     <div style="flex: 0 0 calc(45% - 10px); background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #1e40af; margin-bottom: 32px; letter-spacing: 0.3px;">Analyse statistique</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
@@ -799,8 +691,6 @@
                             <div style="line-height: 1.8; font-size: 15px; color: #1f2937;">Visualisation graphique des résultats</div>
                         </div>
                     </div>
-
-                    <!-- CARTE 4: Personnelles -->
                     <div style="flex: 0 0 calc(45% - 10px); background: linear-gradient(135deg, #faf5ff 0%, #f5f0ff 100%); border: 2.5px solid #7c3aed; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #6d28d9; margin-bottom: 32px; letter-spacing: 0.3px;">Qualités personnelles</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
@@ -849,8 +739,8 @@
                         <p>Maîtrise des formats de fichiers (CSV, Excel, JSON). Gestion efficace des données importées et exportées.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
-                            <span class="tag">I/O Files</span>
-                            <span class="tag">Data Handling</span>
+                            <span class="tag">JSON</span>
+                            <span class="tag">Traitement des données</span>
                         </div>
                         <a href="projets/S1/projet2/s1-projet2.html" class="project-link">→ Voir le détail</a>
                     </div>
@@ -874,11 +764,11 @@
                     <div class="project-image">🏢</div>
                     <div class="project-body">
                         <h4>Production de données en entreprise</h4>
-                        <p>Apprendre en situation la production de données en entreprise. Compréhension du cycle de vie des données.</p>
+                        <p>Analyse du réarmement démographique à partir des données INSEE. Rapport professionnel sur les communes à haute natalité.</p>
                         <div class="tags">
-                            <span class="tag">Business</span>
-                            <span class="tag">Data Ops</span>
-                            <span class="tag">Métier</span>
+                            <span class="tag">INSEE</span>
+                            <span class="tag">Statistiques</span>
+                            <span class="tag">Rapport</span>
                         </div>
                         <a href="projets/S1/projet4/s1-projet4.html" class="project-link">→ Voir le détail</a>
                     </div>
@@ -890,8 +780,8 @@
                         <h4>Présentation en anglais d'un territoire économique et culturel</h4>
                         <p>Présentation en anglais d'un territoire économique et culturel. Compétences de communication professionnelle internationale.</p>
                         <div class="tags">
-                            <span class="tag">English</span>
-                            <span class="tag">Presentation</span>
+                            <span class="tag">Anglais</span>
+                            <span class="tag">Présentation</span>
                             <span class="tag">PowerPoint</span>
                         </div>
                         <a href="projets/S1/projet5/s1-projet5.html" class="project-link">→ Voir le détail</a>
@@ -902,11 +792,11 @@
                     <div class="project-image">📋</div>
                     <div class="project-body">
                         <h4>Mise en œuvre d'une enquête</h4>
-                        <p>Conception et réalisation d'une enquête. Collecte de données, analyse des réponses et rapportage des résultats.</p>
+                        <p>Conception et réalisation d'une enquête sur les jeunes et les réseaux sociaux. Cahier des charges, organigramme et questionnaire.</p>
                         <div class="tags">
-                            <span class="tag">Surveys</span>
-                            <span class="tag">Data Collection</span>
-                            <span class="tag">Analysis</span>
+                            <span class="tag">Sphinx</span>
+                            <span class="tag">Enquête</span>
+                            <span class="tag">Méthodologie</span>
                         </div>
                         <a href="projets/S1/projet6/s1-projet6.html" class="project-link">→ Voir le détail</a>
                     </div>
@@ -1003,7 +893,7 @@
                     <div class="project-image">🎓</div>
                     <div class="project-body">
                         <h4>Portfolio</h4>
-                        <p>Création de ce portfolio SAé. Présentation synthétique des apprentissages, projets et évolution professionnelle.</p>
+                        <p>Création de ce portfolio. Présentation synthétique des apprentissages, projets et évolution professionnelle.</p>
                         <div class="tags">
                             <span class="tag">HTML/CSS</span>
                             <span class="tag">Web</span>
@@ -1018,16 +908,11 @@
         <!-- PARCOURS -->
         <section id="parcours">
             <h2>Mon parcours personnel</h2>
-            
             <div class="parcours-text">
                 <p>Venue de l'île de la Réunion, j'ai quitté mon île et mes repères pour poursuivre cette formation à Niort. Cette transition m'a transformée : j'ai gagné en autonomie, en maturité et en confiance. C'est une expérience qui m'a forgée et qui guide ma manière d'aborder les défis aujourd'hui.</p>
-                
                 <p>Scolarisée au CNED en première et terminale, j'ai développé une certaine autonomie et rigueur pour apprendre mes cours sans professeur. Quand on est motivée, on trouve les ressources pour progresser et réussir.</p>
-                
                 <p>Titulaire d'un bac général spécialités Maths et SES avec option Maths expertes, j'ai toujours aimé les mathématiques et surtout les statistiques. C'est mon professeur de maths de lycée qui m'a donné confiance en cette discipline : son soutien a vraiment changé ma perspective et m'a permis d'apprécier profondément les maths.</p>
-                
                 <p>Au S1, j'ai découvert la puissance de Python et vraiment commencé à explorer l'informatique sérieusement. C'est fascinant de voir comment on peut transformer des données brutes en solutions concrètes. Je suis à la fois rigoureuse dans mon approche analytique et créative dans mes hobbies, ce qui m'aide à trouver des solutions innovantes.</p>
-                
                 <p>Je me projette peut-être dans le secteur public à l'INSEE ou pour l'armée, où les données contribuent à des enjeux sociétaux réels. C'est un domaine qui m'attire pour son impact.</p>
             </div>
 
@@ -1038,31 +923,26 @@
                     <div class="engagement-date">Depuis septembre 2024</div>
                     <p>Membre actif du club Data Science. Je partage mes projets et organise des sessions de coding pour créer une communauté.</p>
                 </div>
-
                 <div class="engagement-card">
                     <h3>💼 Stage data analyst</h3>
                     <div class="engagement-date">2024-2025</div>
                     <p>Stage d'application pratique en entreprise. Création de tableaux de bord et analyses de données pour la prise de décision business.</p>
                 </div>
-
                 <div class="engagement-card">
                     <h3>👥 Mentorat étudiants S1</h3>
                     <div class="engagement-date">Octobre 2024 - Présent</div>
                     <p>Aide aux premiers projets Python et SQL pour les étudiants en S1. Feedback constructif sur code et méthodologie data.</p>
                 </div>
-
                 <div class="engagement-card">
                     <h3>🏆 Hackathon Data</h3>
                     <div class="engagement-date">Février 2025</div>
                     <p>Participation à un hackathon data où j'ai travaillé avec une équipe pour résoudre un problème de prédiction.</p>
                 </div>
-
                 <div class="engagement-card">
                     <h3>📚 Cours particuliers Python</h3>
                     <div class="engagement-date">Janvier 2025 - Présent</div>
                     <p>Cours particuliers en Python pour étudiants. Adaptation pédagogique des concepts de programmation.</p>
                 </div>
-
                 <div class="engagement-card">
                     <h3>📍 Déléguée de promotion</h3>
                     <div class="engagement-date">Depuis janvier 2025</div>
@@ -1103,125 +983,60 @@
     </footer>
 
     <script>
-        // Fonction pour charger une nouvelle photo
         function loadPhoto(event) {
             const file = event.target.files[0];
-            
             if (file) {
-                // Vérifier la taille
-                if (file.size > 5 * 1024 * 1024) {
-                    alert('⚠️ Le fichier est trop volumineux ! (max 5 MB)');
-                    return;
-                }
-                
-                // Lire le fichier
+                if (file.size > 5 * 1024 * 1024) { alert('⚠️ Le fichier est trop volumineux ! (max 5 MB)'); return; }
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     const photoImg = document.getElementById('photoImg');
                     photoImg.src = e.target.result;
-                    
-                    // Réinitialiser le curseur
                     document.getElementById('cropSlider').value = 0;
                     adjustCrop(0);
-                    
-                    console.log('✅ Photo chargée avec succès !');
                 };
                 reader.readAsDataURL(file);
             }
         }
 
-        // Fonction pour recadrer la photo
         function adjustCrop(value) {
             const photoImg = document.getElementById('photoImg');
             const cropValue = document.getElementById('cropValue');
-            
-            // Convertir la valeur en position verticale (0 = haut, 50 = centre, 100 = bas)
             const position = 50 + (value / 30 * 50);
-            
-            // Appliquer la position
             photoImg.style.objectPosition = `center ${position}%`;
-            
-            // Afficher la valeur
-            if (value > 0) {
-                cropValue.textContent = '⬇️ ' + value;
-            } else if (value < 0) {
-                cropValue.textContent = '⬆️ ' + Math.abs(value);
-            } else {
-                cropValue.textContent = '➡️ 0';
-            }
+            if (value > 0) { cropValue.textContent = '⬇️ ' + value; }
+            else if (value < 0) { cropValue.textContent = '⬆️ ' + Math.abs(value); }
+            else { cropValue.textContent = '➡️ 0'; }
         }
 
-        // Fonction pour initialiser le carrousel avec trackpad
         function initCarousel() {
             const container = document.getElementById('cardsContainer');
-            let isDown = false;
-            let startX = 0;
-            let scrollLeft = 0;
-            let velocity = 0;
-            let lastX = 0;
-            let lastTime = 0;
-
-            // Mouse down - commence le drag
+            let isDown = false, startX = 0, scrollLeft = 0, velocity = 0, lastX = 0, lastTime = 0;
             container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-                lastX = e.pageX;
-                lastTime = Date.now();
+                isDown = true; startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft; lastX = e.pageX; lastTime = Date.now();
                 container.style.cursor = 'grabbing';
             });
-
-            // Mouse up - fin du drag
-            document.addEventListener('mouseup', () => {
-                isDown = false;
-                container.style.cursor = 'grab';
-            });
-
-            // Mouse move - glisse
+            document.addEventListener('mouseup', () => { isDown = false; container.style.cursor = 'grab'; });
             document.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                
+                if (!isDown) return; e.preventDefault();
                 const x = e.pageX - container.offsetLeft;
                 const walk = (x - startX) * 1.2;
                 container.scrollLeft = scrollLeft - walk;
-                
-                // Calcul de la vélocité
-                const currentTime = Date.now();
-                const timeDiff = currentTime - lastTime;
-                if (timeDiff > 0) {
-                    velocity = (lastX - e.pageX) / timeDiff;
-                }
-                lastX = e.pageX;
-                lastTime = currentTime;
+                const currentTime = Date.now(); const timeDiff = currentTime - lastTime;
+                if (timeDiff > 0) { velocity = (lastX - e.pageX) / timeDiff; }
+                lastX = e.pageX; lastTime = currentTime;
             });
-
-            // Wheel - trackpad scroll
-            container.addEventListener('wheel', (e) => {
-                e.preventDefault();
-                container.scrollLeft += e.deltaX;
-            }, { passive: false });
+            container.addEventListener('wheel', (e) => { e.preventDefault(); container.scrollLeft += e.deltaX; }, { passive: false });
         }
 
-        // Initialiser le carrousel au chargement
         document.addEventListener('DOMContentLoaded', initCarousel);
 
         function showSemestre(semestre, button) {
-            // Masquer tous les projets
             document.getElementById('s1-projects').style.display = 'none';
             document.getElementById('s2-projects').style.display = 'none';
-
-            // Afficher le bon semestre
-            if (semestre === 's1') {
-                document.getElementById('s1-projects').style.display = 'grid';
-            } else {
-                document.getElementById('s2-projects').style.display = 'grid';
-            }
-
-            // Mettre à jour les boutons
-            document.querySelectorAll('.semestre-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+            if (semestre === 's1') { document.getElementById('s1-projects').style.display = 'grid'; }
+            else { document.getElementById('s2-projects').style.display = 'grid'; }
+            document.querySelectorAll('.semestre-btn').forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
         }
     </script>
