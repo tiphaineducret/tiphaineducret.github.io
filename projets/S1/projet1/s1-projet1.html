@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création d'un reporting - Tiphaine Ducret</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff; color: #1f2937; line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .back-link { display: inline-block; margin-bottom: 30px; color: #2563eb; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .header { background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px; margin-bottom: 40px; }
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
+        .section { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 30px; margin-bottom: 30px; }
+        .section h2 { font-size: 18px; color: #1f2937; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #2563eb; font-weight: 700; letter-spacing: 0.3px; }
+        .section p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; color: #4b5563; text-align: justify; }
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; }
+        .highlight-box { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 16px; border-radius: 8px; margin: 20px 0; font-size: 15px; line-height: 1.8; }
+        .cta-button { display: inline-block; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.3s; }
+        .preview-img { max-width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); border: 2px solid #2563eb; transition: transform 0.2s; cursor: pointer; display: block; }
+        .preview-img:hover { transform: scale(1.03); }
+        .livrables-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .livrable-item { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+        .livrable-label { font-weight: 600; color: #1e40af; font-size: 14px; margin-bottom: 4px; }
+        .xlsm-preview { max-width: 220px; height: 140px; background: linear-gradient(135deg, #f0fdf4, #dcfce7); border: 2px solid #10b981; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+        .xlsm-preview span:first-child { font-size: 2.5rem; }
+        .xlsm-preview span:last-child { font-size: 13px; font-weight: 600; color: #065f46; }
+        @media (max-width: 600px) { .livrables-grid { grid-template-columns: 1fr; } .meta { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/#projects" class="back-link">← Retour au portfolio</a>
 
+    <div class="header">
+        <h1>📊 Création d'un reporting</h1>
+        <div class="meta">
+            <div class="meta-item">
+                <strong>📅 Semestre</strong>
+                1er semestre (décembre 2025)
+            </div>
+            <div class="meta-item">
+                <strong>💼 Acquis professionnels</strong>
+                Excel, VBA, Tableau de bord
+            </div>
+            <div class="meta-item">
+                <strong>⏱️ Temps estimé</strong>
+                Environ 40 heures
+            </div>
+            <div class="meta-item">
+                <strong>📊 Niveau de difficulté</strong>
+                Moyen à difficile
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Objectif du projet</h2>
+        <p>Créer un outil personnel de suivi des notes pour le BUT SD1 sous Excel, avec une interface VBA. L'application devait permettre de saisir, modifier et visualiser ses notes par semestre et par compétence, avec une décision de jury automatique selon les règles officielles du BUT.</p>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Compétences mises en œuvre</h2>
+        <ul>
+            <li>Conception d'une base de données structurée dans Excel</li>
+            <li>Développement d'un UserForm en VBA pour la saisie des notes</li>
+            <li>Listes déroulantes liées (semestre, compétence, module)</li>
+            <li>Formules avancées : SI imbriqués, NB.SI, MOYENNE pondérée, INDEX/EQUIV</li>
+            <li>Gestion automatique des ABI et des cas particuliers (PPP)</li>
+            <li>Tableau de bord dynamique avec graphiques variés</li>
+            <li>Décision de jury automatique selon les règles de passage en BUT</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📊 Résultats & Livrables</h2>
+        <p>Un classeur Excel avec plusieurs feuilles : un référentiel listant toutes les matières par compétence et semestre, une feuille de décision calculant les moyennes pondérées et le statut de passage, et une feuille d'accueil synthétisant les infos clés (moyenne annuelle, compétences validées, décision du jury). Une interface VBA permet d'ajouter, modifier et supprimer des notes sans toucher directement aux feuilles.</p>
+    </div>
+
+    <div class="section">
+        <h2>✨ Apprentissages clés</h2>
+        <p>Je me suis surtout investie sur la partie Excel : formules avancées, structure des données, tableau de bord dynamique. Le VBA était nouveau pour moi et j'ai appris beaucoup de choses, même si je me suis moins approprié cette partie. J'ai aussi mieux compris l'importance de séparer données, calculs et interface dans un projet informatique.</p>
+    </div>
+
+    <div class="section">
+        <h2>❤️ Ce que j'ai aimé</h2>
+        <p>J'ai adoré voir l'outil prendre vie au fur et à mesure. Le moment où la décision de jury s'affichait automatiquement selon les notes saisies, c'était particulièrement satisfaisant. Travailler sur quelque chose qu'on allait réellement utiliser donnait beaucoup de sens au projet.</p>
+    </div>
+
+    <div class="section">
+        <h2>😟 Défis rencontrés</h2>
+        <p>Le VBA était entièrement nouveau et la logique de certains cas (module PPP, gestion des ABI) était complexe à implémenter. Par manque de temps, le programme comportait plusieurs fautes, notamment une fonction inutilisée et la gestion du PPP incomplète sur les boutons modifier et effacer. C'est une vraie leçon sur la planification et la relecture d'un projet de développement.</p>
+    </div>
+
+    <div class="highlight-box">
+        <strong>📌 Contexte du projet :</strong><br><br>
+        Projet réalisé en binôme, à rendre avant le 21 décembre 2025. L'évaluation portait à 50% sur la qualité technique du fichier Excel (opérationnalité, ergonomie, bonnes pratiques VBA) et à 50% sur un oral individuel en janvier pour vérifier l'appropriation du travail.
+    </div>
+
+    <div class="section" style="background: #f0f4ff; border: 2px solid #2563eb;">
+        <h2 style="border-bottom: 2px solid #2563eb;">📄 Livrables</h2>
+        <p>Le sujet du projet et le fichier Excel interactif avec interface VBA.</p>
+
+        <div class="livrables-grid">
+            <div class="livrable-item">
+                <div class="livrable-label">📋 Sujet du projet</div>
+                <a href="sujet-reporting.pdf" target="_blank">
+                    <img src="reporting-preview.jpg" alt="Aperçu du sujet" class="preview-img">
+                </a>
+                <a href="sujet-reporting.pdf" download="Sujet-Creation-Reporting.pdf"
+                   class="cta-button" style="background: #10b981;">⬇️ Télécharger (PDF)</a>
+            </div>
+            <div class="livrable-item">
+                <div class="livrable-label">📊 Outil Excel / VBA</div>
+                <div class="xlsm-preview">
+                    <span>📊</span>
+                    <span>suivi-notes-BUT-SD1.xlsm</span>
+                </div>
+                <a href="suivi-notes-BUT-SD1.xlsm" download="suivi-notes-BUT-SD1.xlsm"
+                   class="cta-button" style="background: #10b981;">⬇️ Télécharger (.xlsm)</a>
+            </div>
+        </div>
+        <p style="font-size: 12px; color: #6b7280; margin-top: 20px;">Cliquez sur l'aperçu du sujet pour le voir en entier</p>
+    </div>
+</div>
+</body>
+</html>
