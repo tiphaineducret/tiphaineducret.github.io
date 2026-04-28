@@ -1,1 +1,131 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse d'une enquête - Tiphaine Ducret</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff; color: #1f2937; line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .back-link { display: inline-block; margin-bottom: 30px; color: #2563eb; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .header { background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px; margin-bottom: 40px; }
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
+        .section { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 30px; margin-bottom: 30px; }
+        .section h2 { font-size: 18px; color: #1f2937; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #2563eb; font-weight: 700; letter-spacing: 0.3px; }
+        .section p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; color: #4b5563; text-align: justify; }
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; }
+        .highlight-box { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 16px; border-radius: 8px; margin: 20px 0; font-size: 15px; line-height: 1.8; }
+        .cta-button { display: inline-block; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.3s; }
+        .preview-img { max-width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); border: 2px solid #2563eb; transition: transform 0.2s; cursor: pointer; display: block; }
+        .preview-img:hover { transform: scale(1.03); }
+        .livrables-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .livrable-item { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+        .livrable-label { font-weight: 600; color: #1e40af; font-size: 14px; margin-bottom: 4px; }
+        @media (max-width: 600px) { .livrables-grid { grid-template-columns: 1fr; } .meta { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/#projects" class="back-link">← Retour au portfolio</a>
+
+    <div class="header">
+        <h1>🔍 Analyse d'une enquête sur les usages du téléphone chez les étudiants</h1>
+        <div class="meta">
+            <div class="meta-item">
+                <strong>📅 Semestre</strong>
+                1er semestre (janvier 2026)
+            </div>
+            <div class="meta-item">
+                <strong>💼 Acquis professionnels</strong>
+                Analyse d'une enquête, Visualisation, Restitution
+            </div>
+            <div class="meta-item">
+                <strong>⏱️ Temps estimé</strong>
+                Environ 20 heures
+            </div>
+            <div class="meta-item">
+                <strong>📊 Niveau de difficulté</strong>
+                Facile à moyen
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Objectif du projet</h2>
+        <p>À partir de données collectées via Sphinx auprès de 373 étudiants en BUT à l'IUT de Niort, l'objectif était d'analyser les usages du smartphone en milieu étudiant. Il fallait exploiter ces données, construire des visualisations et produire deux livrables : un tableau de bord et un document de synthèse.</p>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Compétences mises en œuvre</h2>
+        <ul>
+            <li>Exploration et nettoyage de données issues d'une enquête réelle</li>
+            <li>Calcul d'indicateurs statistiques descriptifs (fréquences, croisements)</li>
+            <li>Construction de visualisations adaptées aux données (camemberts, barres, pyramides)</li>
+            <li>Analyse des relations entre variables (usage nocturne, sommeil, concentration)</li>
+            <li>Rédaction d'un document de synthèse structuré et argumenté</li>
+            <li>Mise en page professionnelle d'un tableau de bord</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📊 Résultats & Livrables</h2>
+        <p>Le tableau de bord distingue deux profils : utilisateurs intensifs (4h et plus) et modérés (moins de 3h), avec des graphiques sur la répartition par département et les comportements nocturnes. Le document de synthèse approfondit l'analyse en quatre axes : portrait de la communauté, omniprésence du smartphone, effets sur le bien-être et lien avec le sommeil. Résultat marquant : 72% des utilisateurs nocturnes fréquents dorment moins de 7 heures.</p>
+    </div>
+
+    <div class="section">
+        <h2>✨ Apprentissages clés</h2>
+        <p>J'ai appris à faire "parler" des données réelles en croisant des variables pour révéler des relations, comme entre usage nocturne et troubles du sommeil. J'ai aussi compris que le choix du graphique dépend du message à transmettre et que deux livrables complémentaires impliquent d'adapter son niveau de détail selon le format.</p>
+    </div>
+
+    <div class="section">
+        <h2>❤️ Ce que j'ai aimé</h2>
+        <p>J'ai adoré travailler sur des données qui concernaient des étudiants comme moi. Voir des tendances émerger de vraies réponses, c'est beaucoup plus stimulant qu'un exercice fictif. Le moment où les croisements révélaient des patterns nets, c'était vraiment satisfaisant. La construction du tableau de bord a aussi été un vrai plaisir, avec un travail de mise en page et de hiérarchisation de l'information.</p>
+    </div>
+
+    <div class="section">
+        <h2>😟 Défis rencontrés</h2>
+        <p>Avec 373 répondants et de nombreuses variables, il fallait faire des choix : quels croisements privilégier, quels résultats mettre en avant. Rédiger la synthèse de façon fluide et non répétitive par rapport au tableau de bord a aussi demandé un effort de hiérarchisation des idées.</p>
+    </div>
+
+    <div class="highlight-box">
+        <strong>📌 Contexte du projet :</strong><br><br>
+        Les données ont été collectées par l'ensemble de la promotion via Sphinx, auprès de 373 étudiants en BUT à l'IUT de Niort (départements SD, HSE et GEA). Le travail d'analyse et de restitution a été réalisé en binôme.
+    </div>
+
+    <div class="section" style="background: #f0f4ff; border: 2px solid #2563eb;">
+        <h2 style="border-bottom: 2px solid #2563eb;">📄 Livrables</h2>
+        <p>Deux documents complémentaires : un tableau de bord visuel et un document de synthèse analytique.</p>
+
+        <div class="livrables-grid">
+            <div class="livrable-item">
+                <div class="livrable-label">📊 Tableau de bord</div>
+                <a href="tableau-bord-telephone.pdf" target="_blank">
+                    <img src="tableau-bord-preview.jpg" alt="Aperçu tableau de bord" class="preview-img">
+                </a>
+                <a href="tableau-bord-telephone.pdf" download="Tableau-Bord-Telephone-Etudiants.pdf"
+                   class="cta-button" style="background: #10b981;">⬇️ Télécharger (PDF)</a>
+            </div>
+            <div class="livrable-item">
+                <div class="livrable-label">📝 Document de synthèse</div>
+                <a href="synthese-telephone.pdf" target="_blank">
+                    <img src="synthese-preview.jpg" alt="Aperçu synthèse" class="preview-img">
+                </a>
+                <a href="synthese-telephone.pdf" download="Synthese-Usages-Telephone-Etudiants.pdf"
+                   class="cta-button" style="background: #10b981;">⬇️ Télécharger (PDF)</a>
+            </div>
+        </div>
+        <p style="font-size: 12px; color: #6b7280; margin-top: 20px;">Cliquez sur les aperçus pour voir les documents complets</p>
+    </div>
+</div>
+</body>
+</html>
