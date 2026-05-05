@@ -1,1 +1,193 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conception et implémentation d'une base de données - Tiphaine Ducret</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2.5px solid #2563eb;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-size: 15px;
+        }
+
+        .meta-item {
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .meta-item strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2563eb;
+            font-weight: 700;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #1f2937;
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/#projects" class="back-link">← Retour au portfolio</a>
+
+        <div class="header">
+            <h1>🗄️ Conception et implémentation d'une base de données</h1>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>📅 Semestre</strong>
+                    2e semestre (février à avril 2026)
+                </div>
+                <div class="meta-item">
+                    <strong>💼 Acquis Professionnels</strong>
+                    Conception relationnelle, SQL avancé, Nettoyage de données
+                </div>
+                <div class="meta-item">
+                    <strong>⏱️ Temps estimé</strong>
+                    Plus de 150 heures
+                </div>
+                <div class="meta-item">
+                    <strong>📊 Niveau de difficulté</strong>
+                    Difficile
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objectif du projet</h2>
+            <p>Concevoir et implémenter une base de données relationnelle complète pour GreenSD, une entreprise de transport et logistique spécialisée en livraison bas-carbone. Le projet couvre l'entièreté du cycle de vie d'une base de données : de la conception conceptuelle (MCD) à l'implémentation SQL, en passant par le nettoyage de données, l'alimentation de la base et la création d'une interface graphique fonctionnelle. L'objectif final était de gérer les flux logistiques, le suivi des véhicules écologiques, les tournées, les conducteurs et l'empreinte carbone par colis.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Compétences mises en œuvre</h2>
+            <ul>
+                <li>Modélisation de données et conception MCD avec Looping_mcd</li>
+                <li>Génération du schéma relationnel (MLD)</li>
+                <li>SQL avancé : création de tables, contraintes, clés étrangères</li>
+                <li>Nettoyage et transformation de données CSV</li>
+                <li>Automatisation avec Python (lecture CSV, insertion en base)</li>
+                <li>Interface graphique avec Python Tkinter</li>
+                <li>Gestion de base de données avec EasyPHP et MySQL</li>
+                <li>Requêtes SQL complexes : GROUP BY, HAVING, différences algébriques, vues</li>
+                <li>Respect des bonnes pratiques (INNODB, intégrité référentielle, documentation)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 Résultats & Livrables</h2>
+            <p>Un projet complet en 8 étapes : MCD conceptuel (greensd.loo), scripts de création et insertion SQL, programme Python d'automatisation pour importer les données CSV, 10 requêtes SQL pertinentes pour les décideurs, export final de la base, interface graphique Tkinter avec menu de visualisation et gestion des données, et une vidéo de démonstration et tests complets. L'interface permet de visualiser les tables, insérer/modifier/supprimer des tuples, exécuter les requêtes analytiques et créer la base automatiquement. Plus de 150 heures de travail concentrant théorie rigoureuse et créativité pour un logiciel vraiment fonctionnel et professionnel.</p>
+        </div>
+
+        <div class="section">
+            <h2>✨ Apprentissages clés</h2>
+            <p>Ce projet m'a appris à penser en termes de structures de données avant de coder. Comprendre comment les entités se relacionent entre elles, respecter les contraintes d'intégrité référentielle, tout ça c'est la base d'un système fiable. J'ai découvert que SQL n'était pas juste du SELECT simple, mais un langage puissant pour extraire de l'intelligence des données. Python m'a permis d'automatiser le nettoyage et l'import de données réelles, souvent sales et mal structurées. L'interface Tkinter a transformé des scripts en vrai logiciel utilisable. Mais surtout, j'ai compris l'importance de maîtriser les structures avant de vouloir faire quelque chose de professionnel.</p>
+        </div>
+
+        <div class="section">
+            <h2>❤️ Ce que j'ai aimé</h2>
+            <p>J'ai ADORÉ ce projet ! C'était une révélation de pouvoir mêler théorie rigoureuse et créativité pour créer quelque chose de vraiment personnel et customisé. Contrairement à d'autres projets, là on n'avait pas une interface imposée, on pouvait vraiment laisser libre cours à son imagination. Construire un logiciel qui marche, où on voit nos tables se remplir, où on peut cliquer et voir les résultats s'afficher en direct, c'est tellement gratifiant ! Les 150+ heures ont filé parce que c'était absorbing. Chaque problème à résoudre était un vrai challenge technique et créatif à la fois.</p>
+        </div>
+
+        <div class="section">
+            <h2>😟 Défis rencontrés</h2>
+            <p>Le principal défi a été la volumétrie des données et les incohérences dans les fichiers CSV fournis. Nettoyer les données pour les importer sans violer les contraintes d'intégrité a demandé de bien comprendre les règles de gestion. Créer une interface Tkinter vraiment ergonomique et sans bugs a aussi été complexe, surtout quand il faut gérer les connexions à la base. Un autre défi : penser à tous les cas d'usage et edge cases pour que l'interface soit robuste. Enfin, gérer 150+ heures de travail sans perdre la motivation a demandé une bonne organisation et de bien planifier ses sprints.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>🎬 Vidéo de démonstration :</strong><br><br>
+            Le professeur a adoré la vidéo et le logiciel. On voit clairement toute la tonne de travail réalisée et la fonctionnalité complète de l'application. La démo montre les tests, ce qui marche, ce qui ne marche pas, et une réflexion honnête sur les améliorations possibles.
+        </div>
+
+        <div class="section">
+            <h2>🎬 Vidéo de présentation</h2>
+            <p>Découvre la démonstration complète de l'application GreenSD avec tous les tests, les fonctionnalités et le bilan du projet.</p>
+            
+            <a href="https://youtu.be/o1cOTM0rrFI" target="_blank" class="cta-button" style="background: #e11d48; display: inline-block;">▶️ Voir la vidéo de démonstration</a>
+            
+            <p style="font-size: 12px; color: #6b7280; margin-top: 16px;">Clique pour accéder à la vidéo YouTube complète</p>
+        </div>
+    </div>
+</body>
+</html>
