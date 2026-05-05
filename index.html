@@ -1032,13 +1032,13 @@
         document.addEventListener('DOMContentLoaded', initCarousel);
 
         // Détection du semestre à afficher selon l'URL
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     if (window.location.hash === '#projects-s2') {
         const s2btn = document.querySelectorAll('.semestre-btn')[1];
         showSemestre('s2', s2btn);
         setTimeout(() => {
             document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+        }, 200);
     }
 });
 
