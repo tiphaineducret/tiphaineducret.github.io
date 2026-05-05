@@ -1033,7 +1033,8 @@
 
         // Détection du semestre à afficher selon l'URL
 window.addEventListener('load', function() {
-    if (window.location.hash === '#projects-s2') {
+    if (sessionStorage.getItem('showS2') === '1') {
+        sessionStorage.removeItem('showS2');
         const s2btn = document.querySelectorAll('.semestre-btn')[1];
         showSemestre('s2', s2btn);
         setTimeout(() => {
