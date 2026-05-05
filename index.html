@@ -1032,11 +1032,15 @@
         document.addEventListener('DOMContentLoaded', initCarousel);
 
         // Détection du semestre à afficher selon l'URL
-        if (window.location.hash === '#s2') {
-            const s2btn = document.querySelectorAll('.semestre-btn')[1];
-            showSemestre('s2', s2btn);
-            document.getElementById('projects').scrollIntoView();
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#projects-s2') {
+        const s2btn = document.querySelectorAll('.semestre-btn')[1];
+        showSemestre('s2', s2btn);
+        setTimeout(() => {
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    }
+});
 
         function showSemestre(semestre, button) {
             document.getElementById('s1-projects').style.display = 'none';
