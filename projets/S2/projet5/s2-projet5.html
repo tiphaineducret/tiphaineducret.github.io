@@ -1,1 +1,309 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction et présentation d'indicateurs KPI - Tiphaine Ducret</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2.5px solid #2563eb;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-size: 15px;
+        }
+
+        .meta-item {
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .meta-item strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2563eb;
+            font-weight: 700;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #1f2937;
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #1f2937;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .deliverable-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            background: #f9fafb;
+            text-align: center;
+        }
+
+        .preview-placeholder {
+            height: 150px;
+            border: 2px dashed #93c5fd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .deliverable-card h3 {
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .deliverable-card p {
+            font-size: 14px;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: #e11d48;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .cta-button:hover {
+            opacity: 0.85;
+        }
+
+        .disabled-button {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: #9ca3af;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 700px) {
+            .meta {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 30px 22px;
+            }
+
+            .section {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <a href="/#projects-s2" class="back-link" onclick="sessionStorage.setItem('showS2', '1')">← Retour au portfolio</a>
+
+        <div class="header">
+            <h1>📊 Construction et présentation d'indicateurs KPI</h1>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>📅 Semestre</strong>
+                    2e semestre (2026)
+                </div>
+                <div class="meta-item">
+                    <strong>💼 Acquis Professionnels</strong>
+                    KPI financiers, Analyse de données, Visualisation
+                </div>
+                <div class="meta-item">
+                    <strong>⏱️ Temps estimé</strong>
+                    Environ 10 heures
+                </div>
+                <div class="meta-item">
+                    <strong>📊 Difficulté</strong>
+                    Moyen à difficile
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objectif du projet</h2>
+            <p>Construire des indicateurs de performance et un tableau de bord décisionnel à partir des données financières de Fleury-Michon. Le projet consistait à analyser l'évolution du chiffre d'affaires, des résultats financiers et de plusieurs ratios de performance afin de produire une synthèse claire et exploitable pour la prise de décision.</p>
+            <p>L'objectif était aussi de rendre les données plus lisibles grâce à des graphiques adaptés, des indicateurs pertinents et une présentation visuelle capable de résumer rapidement la situation de l'entreprise.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Compétences mises en œuvre</h2>
+            <ul>
+                <li>Analyse financière à partir de comptes de résultat</li>
+                <li>Construction d'indicateurs de performance</li>
+                <li>Calcul de ratios et de taux de variation</li>
+                <li>Analyse du chiffre d'affaires et du résultat</li>
+                <li>Création de graphiques lisibles et pertinents</li>
+                <li>Réalisation d'un tableau de bord synthétique</li>
+                <li>Interprétation des résultats pour aider à la décision</li>
+                <li>Communication visuelle et mise en forme d'une étude</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 Résultats & Livrables</h2>
+            <p>Le projet a abouti à la réalisation d'un dossier d'étude sur Fleury-Michon, comprenant une présentation synthétique de l'entreprise, une analyse du chiffre d'affaires, une analyse des résultats financiers, plusieurs calculs d'indicateurs et des visualisations graphiques.</p>
+            <p>Une partie importante du travail a aussi porté sur la création d'un tableau de bord regroupant les KPI les plus utiles pour comprendre rapidement l'activité, la profitabilité, la productivité et la situation globale de Fleury-Michon LS.</p>
+        </div>
+
+        <div class="section">
+            <h2>✨ Apprentissages clés</h2>
+            <p>Ce projet m'a appris à transformer des données financières brutes en informations compréhensibles et utiles. J'ai mieux compris le rôle des KPI dans le pilotage d'une entreprise et l'importance de bien choisir ses indicateurs selon le message que l'on veut transmettre.</p>
+            <p>J'ai aussi progressé sur la lecture de données financières, l'interprétation de ratios et la création de graphiques. J'ai compris qu'un bon tableau de bord ne doit pas seulement être esthétique, il doit surtout aider à comprendre rapidement une situation et à prendre de meilleures décisions.</p>
+        </div>
+
+        <div class="section">
+            <h2>❤️ Ce que j'ai aimé</h2>
+            <p>J'ai particulièrement aimé appliquer concrètement mes cours d'économie et gestion à un vrai cas d'analyse d'entreprise. Le projet était intéressant parce qu'on ne faisait pas seulement des calculs, il fallait aussi comprendre ce que les chiffres racontaient sur l'activité de Fleury-Michon.</p>
+            <p>J'ai aussi apprécié toute la partie création de graphiques et tableau de bord. C'était satisfaisant de réussir à rendre des données financières plus visuelles, plus claires et plus faciles à interpréter rapidement.</p>
+        </div>
+
+        <div class="section">
+            <h2>😟 Défis rencontrés</h2>
+            <p>Le principal défi a été de bien interpréter les indicateurs financiers et de ne pas se limiter aux calculs. Il fallait comprendre ce que les chiffres signifiaient vraiment pour l'entreprise, puis réussir à les expliquer clairement.</p>
+            <p>Le choix des représentations graphiques a aussi demandé de la réflexion. Certains indicateurs peuvent être difficiles à lire si le graphique n'est pas adapté. Il fallait donc trouver un équilibre entre précision, lisibilité et qualité visuelle.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>💬 Ce que ce projet m'a apporté :</strong><br><br>
+            Ce projet m'a permis de mieux comprendre comment les entreprises utilisent les KPI pour suivre leur activité, comparer leurs résultats et prendre des décisions stratégiques. Il m'a aussi montré l'importance de la communication visuelle dans l'analyse de données.
+        </div>
+
+        <div class="section">
+            <h2>📁 Livrables du projet</h2>
+            <p>Les documents du projet seront ajoutés prochainement. Cette section sera complétée avec les aperçus et les fichiers à télécharger dès qu'ils seront prêts à être intégrés au portfolio.</p>
+
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <div class="preview-placeholder">📄 Aperçu du dossier PDF<br>disponible prochainement</div>
+                    <h3>Dossier d'étude</h3>
+                    <p>Analyse financière et indicateurs KPI de Fleury-Michon.</p>
+                    <span class="disabled-button">Bientôt disponible</span>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="preview-placeholder">📊 Aperçu du tableau de bord<br>disponible prochainement</div>
+                    <h3>Tableau de bord KPI</h3>
+                    <p>Synthèse visuelle de la situation de Fleury-Michon LS.</p>
+                    <span class="disabled-button">Bientôt disponible</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
