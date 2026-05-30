@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Échantillonnage et Estimation - Tiphaine Ducret</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -18,11 +14,7 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
         .back-link {
             display: inline-block;
@@ -31,10 +23,7 @@
             text-decoration: none;
             font-weight: 500;
         }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
+        .back-link:hover { text-decoration: underline; }
 
         .header {
             background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
@@ -44,32 +33,12 @@
             margin-bottom: 40px;
         }
 
-        .header h1 {
-            font-size: 22px;
-            color: #1f2937;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
 
-        .meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            font-size: 15px;
-        }
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
 
-        .meta-item {
-            padding: 12px;
-            background: white;
-            border-radius: 8px;
-            border-left: 3px solid #2563eb;
-        }
-
-        .meta-item strong {
-            color: #1e40af;
-            display: block;
-            margin-bottom: 4px;
-        }
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
 
         .section {
             background: white;
@@ -80,32 +49,17 @@
         }
 
         .section h2 {
-            font-size: 18px;
-            color: #1f2937;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #2563eb;
-            font-weight: 700;
+            font-size: 18px; color: #1f2937; margin-bottom: 16px;
+            padding-bottom: 12px; border-bottom: 2px solid #2563eb; font-weight: 700;
         }
 
         .section p {
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 12px;
-            color: #4b5563;
-            text-align: justify;
+            font-size: 15px; line-height: 1.8; margin-bottom: 12px;
+            color: #4b5563; text-align: justify;
         }
 
-        .section ul {
-            margin-left: 20px;
-            line-height: 1.8;
-            font-size: 15px;
-            color: #1f2937;
-        }
-
-        .section ul li {
-            margin-bottom: 8px;
-        }
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; }
 
         .highlight-box {
             background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
@@ -117,111 +71,20 @@
             line-height: 1.8;
             color: #1f2937;
         }
+        .highlight-box strong { color: #2563eb; }
 
-        .highlight-box strong {
-            color: #2563eb;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .result-card {
-            background: #f8faff;
-            border-left: 3px solid #2563eb;
-            border-radius: 8px;
-            padding: 14px;
-            text-align: center;
-        }
-
-        .result-card:nth-child(2) { border-left-color: #7c3aed; }
-        .result-card:nth-child(3) { border-left-color: #2563eb; }
-
-        .result-card .value {
-            font-size: 20px;
-            font-weight: 700;
-            color: #2563eb;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .result-card:nth-child(2) .value { color: #7c3aed; }
-
-        .result-card .label {
-            font-size: 12px;
-            color: #64748b;
-        }
-
-        .tags-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 8px;
-        }
-
+        .tags-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
         .tag {
-            background: #f0f4ff;
-            color: #2563eb;
-            border: 1px solid #c7d7fb;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
+            background: #f0f4ff; color: #2563eb; border: 1px solid #c7d7fb;
+            padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 500;
         }
 
         .cta-button {
-            display: inline-block;
-            margin-top: 16px;
-            padding: 12px 24px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: opacity 0.2s;
+            display: inline-block; margin-top: 16px; padding: 12px 24px;
+            background: #2563eb; color: white; text-decoration: none;
+            border-radius: 8px; font-weight: 600; font-size: 15px; transition: opacity 0.2s;
         }
-
-        .cta-button:hover {
-            opacity: 0.85;
-        }
-
-        .methode-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
-            margin-top: 12px;
-        }
-
-        .methode-card {
-            background: #f8faff;
-            border-radius: 8px;
-            padding: 16px;
-            border-top: 3px solid #2563eb;
-            font-size: 14px;
-        }
-
-        .methode-card:nth-child(2) { border-top-color: #7c3aed; }
-        .methode-card:nth-child(3) { border-top-color: #2563eb; }
-
-        .methode-card strong {
-            display: block;
-            font-size: 13px;
-            margin-bottom: 6px;
-            color: #2563eb;
-        }
-
-        .methode-card:nth-child(2) strong { color: #7c3aed; }
-
-        .methode-card p {
-            font-size: 13px;
-            color: #64748b;
-            margin: 0;
-            text-align: left;
-        }
+        .cta-button:hover { opacity: 0.85; }
     </style>
 </head>
 <body>
@@ -253,49 +116,26 @@
 
         <div class="section">
             <h2>🎯 Objectif du projet</h2>
-            <p>Estimer le nombre total d'habitants de la région Auvergne-Rhône-Alpes à partir d'un processus d'échantillonnage, et évaluer la précision de cette estimation via des intervalles de confiance. Le projet compare deux méthodes de sondage : le sondage aléatoire simple (SAS) et le sondage stratifié, en mettant en évidence leurs limites et leurs avantages selon la structure de la population étudiée.</p>
-            <p>La deuxième partie du projet porte sur l'analyse d'une enquête étudiante sur la pratique sportive, avec des tests d'indépendance et des mesures d'intensité de liaison.</p>
+            <p>Estimer le nombre total d'habitants d'Auvergne-Rhône-Alpes à partir d'un processus d'échantillonnage et évaluer la précision de cette estimation via des intervalles de confiance. Le projet compare le sondage aléatoire simple (SAS) et le sondage stratifié sur des données réelles INSEE de 4 037 communes. Une deuxième partie porte sur l'analyse d'une enquête étudiante sur la pratique sportive via des tests statistiques.</p>
         </div>
 
         <div class="section">
             <h2>🛠️ Compétences mises en œuvre</h2>
             <ul>
                 <li>Chargement et nettoyage de données réelles sous R (fichier Excel INSEE)</li>
-                <li>Sondage aléatoire simple (SAS) : tirage sans remise, estimation de µ et T</li>
-                <li>Calcul d'intervalles de confiance à 95% (Student et asymptotique)</li>
-                <li>Sondage stratifié : création de strates par quartiles, allocation proportionnelle</li>
-                <li>Passage de 4 à 6 strates pour améliorer la précision (isolation des grandes agglomérations)</li>
-                <li>Répétition de 10 tirages pour visualiser la variabilité des estimations</li>
-                <li>Tests du khi-deux d'indépendance et calcul du V de Cramer</li>
-                <li>Vérification des conditions d'application des tests statistiques</li>
-                <li>Rédaction d'un rapport complet avec code R commenté et valorisation des résultats</li>
+                <li>Sondage aléatoire simple et stratifié, tirage sans remise</li>
+                <li>Calcul d'intervalles de confiance à 95% et marges d'erreur</li>
+                <li>Stratification par quartiles, passage de 4 à 6 strates</li>
+                <li>Tests du khi-deux et V de Cramer sur données d'enquête</li>
+                <li>Rédaction d'un rapport complet avec code R commenté</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>📋 Résultats clés</h2>
-            <p>La région Auvergne-Rhône-Alpes compte 4 037 communes pour une population réelle de 8 250 506 habitants. Comparaison des trois méthodes sur 10 tirages :</p>
-
-            <div class="methode-grid">
-                <div class="methode-card">
-                    <strong>SAS</strong>
-                    <p>Marge d'erreur moyenne : 5,6M habitants. Très variable, inadapté à la forte hétérogénéité de la région.</p>
-                </div>
-                <div class="methode-card">
-                    <strong>Stratifié 4 strates</strong>
-                    <p>Marge d'erreur moyenne : 4,8M habitants. Amélioration visible mais strate 4 encore trop hétérogène.</p>
-                </div>
-                <div class="methode-card">
-                    <strong>Stratifié 6 strates</strong>
-                    <p>Marge d'erreur moyenne : 1,4M habitants. Nette amélioration en isolant Lyon, Grenoble, Saint-Étienne.</p>
-                </div>
-            </div>
-
-            <p style="margin-top: 16px;">Pour la partie enquête sportive (374 étudiants), deux variables sont significativement liées à la pratique du sport : le sexe (p = 0,0003, V = 0,189) et le niveau d'études (p = 0,043, V = 0,148). Les liaisons sont statistiquement significatives mais d'intensité faible.</p>
-
+            <h2>📋 Résultats & Livrables</h2>
+            <p>Comparaison de trois méthodes sur 10 tirages : le SAS produit une marge d'erreur moyenne de 5,6M habitants, le stratifié à 4 strates de 4,8M, et le stratifié à 6 strates seulement 1,4M en isolant les grandes agglomérations. Pour l'enquête sportive, le sexe et le niveau d'études sont les deux variables significativement liées à la pratique du sport.</p>
             <div class="tags-grid">
                 <span class="tag">R</span>
-                <span class="tag">Statistique inférentielle</span>
                 <span class="tag">Sondage stratifié</span>
                 <span class="tag">Intervalle de confiance</span>
                 <span class="tag">Test khi-deux</span>
@@ -306,28 +146,27 @@
 
         <div class="section">
             <h2>✨ Apprentissages clés</h2>
-            <p>Ce projet m'a permis de comprendre concrètement ce que signifie "estimer" une valeur inconnue : ce n'est pas seulement calculer un chiffre, c'est quantifier l'incertitude qui l'accompagne. J'ai compris que le plan de sondage est un choix méthodologique décisif : le SAS est simple mais inadapté aux populations hétérogènes comme Auvergne-Rhône-Alpes, où une commune peut avoir 10 habitants ou 500 000. Le sondage stratifié, en exploitant la structure connue de la population, produit des estimations bien plus fiables. Passer de 4 à 6 strates en isolant les grandes agglomérations a réduit la marge d'erreur de 4,8M à 1,4M habitants, ce qui illustre très clairement l'importance du choix des seuils.</p>
-            <p>Sur la partie enquête, j'ai appris à distinguer significativité statistique et intensité d'une liaison : une relation peut être significative sans être forte, ce que le V de Cramer permet de mesurer.</p>
+            <p>Ce projet m'a permis de comprendre concrètement ce que signifie "estimer" une valeur inconnue et quantifier l'incertitude associée. Le plan de sondage est un choix méthodologique décisif : le SAS est simple mais inadapté aux populations hétérogènes. Passer de 4 à 6 strates en isolant les grandes agglomérations a réduit la marge d'erreur de 4,8M à 1,4M habitants, illustration très claire de l'importance du choix des seuils.</p>
         </div>
 
         <div class="section">
             <h2>❤️ Ce que j'ai aimé</h2>
-            <p>J'ai adoré ce projet ! Manipuler des vraies données INSEE, utiliser R pour coder les sondages, visualiser les estimations et rédiger un rapport complet, c'est exactement le type de travail qui m'attire en Science des Données. Voir concrètement comment la méthode de sondage influence la précision des résultats, c'était fascinant. La comparaison des trois méthodes sur 10 tirages a rendu les concepts statistiques très tangibles. Rédiger un rapport où chaque ligne de code est expliquée et commentée m'a aussi appris à être rigoureuse dans ma communication des résultats.</p>
+            <p>J'ai adoré ce projet ! Manipuler de vraies données INSEE, coder les sondages en R et rédiger un rapport complet, c'est exactement ce qui m'attire en Science des Données. Voir concrètement comment la méthode de sondage influence la précision des résultats était fascinant, et la comparaison des trois méthodes sur 10 tirages a rendu les concepts statistiques très tangibles.</p>
         </div>
 
         <div class="section">
             <h2>😟 Défis rencontrés</h2>
-            <p>Le principal défi était de bien comprendre les formules statistiques du sondage stratifié pour les implémenter correctement en R, notamment le calcul de la variance de l'estimateur stratifié avec le taux de sondage. La gestion des petites strates (strates 5 et 6 avec seulement 15 communes) a aussi posé problème pour l'allocation proportionnelle, qui donnait nh = 0. Nous avons dû forcer manuellement un minimum de 2 communes par strate tout en maintenant un total de 100. Pour la partie enquête, la vérification des conditions d'application du test khi-deux (effectifs théoriques ≥ 5) a nécessité d'exclure une modalité du test sur le logement.</p>
+            <p>Implémenter correctement la variance de l'estimateur stratifié en R avec le taux de sondage a demandé une bonne maîtrise des formules du cours. La gestion des petites strates (seulement 15 communes pour la strate 6) nécessitait de forcer manuellement un minimum de 2 communes par strate tout en maintenant un total de 100.</p>
         </div>
 
         <div class="highlight-box">
             <strong>💡 Contexte :</strong><br><br>
-            Projet réalisé en binôme avec Oscar Makosso dans le cadre du cours de Statistique Inférentielle. Données INSEE sur les communes de France métropolitaine, enrichies d'une enquête sur la pratique sportive étudiante. Rapport complet avec code R commenté, graphiques et tableaux Excel exportés.
+            Projet réalisé en binôme avec Oscar Makosso dans le cadre du cours de Statistique Inférentielle. Données INSEE sur les communes de France métropolitaine, enrichies d'une enquête sur la pratique sportive étudiante (374 répondants).
         </div>
 
         <div class="section">
             <h2>📄 Rapport complet</h2>
-            <p>Découvre le rapport complet avec le code R, les graphiques et l'analyse des résultats.</p>
+            <p>Découvre le rapport avec le code R, les graphiques et l'analyse des résultats.</p>
             <a href="rapport_SAE.pdf" target="_blank" class="cta-button">📄 Voir le rapport</a>
             <p style="font-size: 12px; color: #6b7280; margin-top: 12px;">Clique pour accéder au PDF complet.</p>
         </div>
