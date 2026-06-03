@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataviz — Démographie rurale - Tiphaine Ducret</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -19,11 +14,7 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
         .back-link {
             display: inline-block;
@@ -32,10 +23,7 @@
             text-decoration: none;
             font-weight: 500;
         }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
+        .back-link:hover { text-decoration: underline; }
 
         .header {
             background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
@@ -45,32 +33,12 @@
             margin-bottom: 40px;
         }
 
-        .header h1 {
-            font-size: 22px;
-            color: #1f2937;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
 
-        .meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            font-size: 15px;
-        }
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
 
-        .meta-item {
-            padding: 12px;
-            background: white;
-            border-radius: 8px;
-            border-left: 3px solid #2563eb;
-        }
-
-        .meta-item strong {
-            color: #1e40af;
-            display: block;
-            margin-bottom: 4px;
-        }
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
 
         .section {
             background: white;
@@ -81,32 +49,17 @@
         }
 
         .section h2 {
-            font-size: 18px;
-            color: #1f2937;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #2563eb;
-            font-weight: 700;
+            font-size: 18px; color: #1f2937; margin-bottom: 16px;
+            padding-bottom: 12px; border-bottom: 2px solid #2563eb; font-weight: 700;
         }
 
         .section p {
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 12px;
-            color: #4b5563;
-            text-align: justify;
+            font-size: 15px; line-height: 1.8; margin-bottom: 12px;
+            color: #4b5563; text-align: justify;
         }
 
-        .section ul {
-            margin-left: 20px;
-            line-height: 1.8;
-            font-size: 15px;
-            color: #1f2937;
-        }
-
-        .section ul li {
-            margin-bottom: 8px;
-        }
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; }
 
         .highlight-box {
             background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
@@ -118,93 +71,20 @@
             line-height: 1.8;
             color: #1f2937;
         }
+        .highlight-box strong { color: #2563eb; }
 
-        .highlight-box strong {
-            color: #2563eb;
-        }
-
-        .infographie-preview {
-            margin-top: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid #e5e7eb;
-            text-align: center;
-            background: #f9fafb;
-            padding: 20px;
-        }
-
-        .infographie-preview p {
-            color: #6b7280;
-            font-size: 13px;
-            margin-top: 10px;
-        }
-
-        .tags-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 8px;
-        }
-
+        .tags-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
         .tag {
-            background: #f0f4ff;
-            color: #2563eb;
-            border: 1px solid #c7d7fb;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
+            background: #f0f4ff; color: #2563eb; border: 1px solid #c7d7fb;
+            padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 500;
         }
 
         .cta-button {
-            display: inline-block;
-            margin-top: 16px;
-            padding: 12px 24px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: opacity 0.2s;
+            display: inline-block; margin-top: 16px; padding: 12px 24px;
+            background: #2563eb; color: white; text-decoration: none;
+            border-radius: 8px; font-weight: 600; font-size: 15px; transition: opacity 0.2s;
         }
-
-        .cta-button:hover {
-            opacity: 0.85;
-        }
-
-        .groupe-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 12px;
-        }
-
-        .groupe-card {
-            background: #f8faff;
-            border-left: 3px solid #2563eb;
-            border-radius: 8px;
-            padding: 14px;
-            font-size: 14px;
-            color: #374151;
-        }
-
-        .groupe-card:nth-child(even) {
-            border-left-color: #7c3aed;
-        }
-
-        .groupe-card strong {
-            color: #2563eb;
-            display: block;
-            margin-bottom: 4px;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .groupe-card:nth-child(even) strong {
-            color: #7c3aed;
-        }
+        .cta-button:hover { opacity: 0.85; }
     </style>
 </head>
 <body>
@@ -236,49 +116,23 @@
 
         <div class="section">
             <h2>🎯 Objectif du projet</h2>
-            <p>Dans le cadre d'un challenge Data Viz organisé en une seule journée, notre groupe de 4 a dû analyser des données démographiques INSEE pour produire une infographie complète sur une problématique précise. Nous avons choisi de répondre à la question : comment des villages qui grandissent peuvent-ils voir leurs écoles fermer ? Une question contre-intuitive qui révèle une fracture silencieuse dans les territoires ruraux d'Auvergne-Rhône-Alpes.</p>
+            <p>Dans le cadre d'un challenge Data Viz en une journée, notre groupe de 4 a analysé des données démographiques INSEE pour produire une infographie sur une problématique précise : comment des villages qui grandissent peuvent-ils voir leurs écoles fermer ? Une question contre-intuitive qui révèle une fracture silencieuse dans les territoires ruraux d'Auvergne-Rhône-Alpes.</p>
         </div>
 
         <div class="section">
             <h2>🛠️ Compétences mises en œuvre</h2>
             <ul>
-                <li>Recherche et exploration de données INSEE (COM_AGE, naissances, décès, solde migratoire)</li>
-                <li>Croisement avec des données Opendata de l'Éducation nationale (RAMSESE, effectifs écoles)</li>
-                <li>Nettoyage et vérification rigoureuse des données sur une grande volumétrie</li>
+                <li>Recherche et exploration de données INSEE et Éducation nationale</li>
+                <li>Nettoyage et vérification rigoureuse sur grande volumétrie</li>
                 <li>Structuration d'une problématique pertinente en temps limité</li>
-                <li>Création de visualisations graphiques (graphiques en barres, courbes d'évolution)</li>
-                <li>Mise en page infographique sur Canva</li>
+                <li>Création de visualisations graphiques et mise en page sur Canva</li>
                 <li>Travail en équipe avec répartition claire des rôles</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>👥 Organisation du groupe</h2>
-            <p>Nous avons rapidement réparti les rôles pour maximiser l'efficacité sur cette journée intensive.</p>
-            <div class="groupe-grid">
-                <div class="groupe-card">
-                    <strong>🔍 Exploration des données</strong>
-                    Recherche des données INSEE et structuration des fichiers bruts
-                </div>
-                <div class="groupe-card">
-                    <strong>📚 Données externes</strong>
-                    Recherche des données Éducation nationale (fermetures d'écoles, effectifs)
-                </div>
-                <div class="groupe-card">
-                    <strong>📊 Vérification</strong>
-                    Contrôle croisé des données et validation des chiffres clés sur grande volumétrie
-                </div>
-                <div class="groupe-card">
-                    <strong>🎨 Infographie</strong>
-                    Mise en page finale et création des visualisations sur Canva
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
             <h2>📋 Résultats & Livrables</h2>
-            <p>Une infographie complète d'une page structurée en 4 parties : vue générale du rural en Auvergne-Rhône-Alpes, analyse des profils démographiques entrants, comparaison avec le Littoral, et analyse des causes opposées menant au même résultat. Le tout appuyé sur des données INSEE 2016-2022 et des données du Ministère de l'Éducation nationale.</p>
-            <p>Notre principal résultat : en 6 ans, le rural d'Auvergne-Rhône-Alpes a gagné +14 000 habitants mais perdu 382 écoles. Non pas par perte de population, mais parce que ce sont principalement des retraités qui s'installent, pas des familles avec enfants.</p>
+            <p>Une infographie d'une page en 4 parties : vue générale du rural, profils démographiques, comparaison avec le Littoral, et analyse des causes opposées. Résultat marquant : en 6 ans, le rural d'Auvergne-Rhône-Alpes a gagné +14 000 habitants mais perdu 382 écoles, principalement parce que ce sont des retraités qui s'installent, pas des familles avec enfants.</p>
             <div class="tags-grid">
                 <span class="tag">INSEE</span>
                 <span class="tag">Canva</span>
@@ -291,29 +145,28 @@
 
         <div class="section">
             <h2>✨ Apprentissages clés</h2>
-            <p>Ce projet m'a appris à travailler sous pression réelle : trouver une problématique pertinente, exploiter des données complexes et livrer un résultat professionnel en une seule journée. J'ai compris que la rigueur dans la vérification des données est primordiale, surtout quand les volumes sont importants et qu'on travaille vite. La visualisation de données ce n'est pas juste faire de beaux graphiques, c'est avant tout raconter une histoire cohérente et surprenante à partir de chiffres.</p>
+            <p>Travailler sous pression réelle m'a appris que la rigueur dans la vérification des données est primordiale quand on va vite. J'ai aussi compris que la dataviz ce n'est pas juste faire de beaux graphiques, c'est raconter une histoire cohérente et surprenante à partir de chiffres.</p>
         </div>
 
         <div class="section">
             <h2>❤️ Ce que j'ai aimé</h2>
-            <p>J'ai adoré ce projet ! Chercher les données INSEE, creuser pour trouver le paradoxe démographique, c'était fascinant. C'est exactement le genre de travail qui me motive : des données réelles, une vraie question de société, et un résultat concret à produire. L'intensité de la journée était aussi stimulante, même si épuisante. Voir l'infographie prendre forme progressivement et raconter quelque chose de vrai et de surprenant, c'était très gratifiant.</p>
+            <p>J'ai adoré ce projet ! Chercher les données INSEE, creuser pour trouver le paradoxe démographique, c'était fascinant. Des données réelles, une vraie question de société, un résultat concret en une journée : c'est exactement le genre de travail qui me motive.</p>
         </div>
 
         <div class="section">
             <h2>😟 Défis rencontrés</h2>
-            <p>La principale difficulté était la contrainte de temps : 7 heures pour analyser, structurer, visualiser et mettre en page, c'est très court. La volumétrie des données INSEE demandait une vérification constante pour éviter les erreurs. Il fallait aussi trouver rapidement une problématique assez précise et originale pour se démarquer, sans se perdre dans les données. La coordination en groupe sur une journée aussi dense demandait une communication très efficace.</p>
+            <p>7 heures pour analyser, structurer, visualiser et mettre en page, c'est très court. La volumétrie des données imposait une vérification constante, et trouver rapidement une problématique originale sans se perdre dans les données a demandé beaucoup de concentration collective.</p>
         </div>
 
         <div class="highlight-box">
-            <strong>🏆 Contexte :</strong><br><br>
-            Challenge Data Viz 2026 organisé dans le cadre du BUT Science des données 1re année. Sujet imposé le matin, rendu à 16h. Données INSEE sur les évolutions démographiques 2016-2022 enrichies de données Opendata de l'Éducation nationale. Travail en groupe de 4.
+            <strong>🏆 Contexte :</strong> Challenge Data Viz 2026 — BUT Science des données 1re année. Sujet imposé le matin, rendu à 16h. Travail en groupe de 4.
         </div>
 
         <div class="section">
             <h2>📄 Infographie</h2>
             <p>Découvre notre infographie complète sur la démographie rurale en Auvergne-Rhône-Alpes.</p>
             <a href="infographie.png" target="_blank" class="cta-button">📊 Voir l'infographie</a>
-            <p style="font-size: 12px; color: #6b7280; margin-top: 12px;">Clique pour accéder au PDF complet.</p>
+            <p style="font-size: 12px; color: #6b7280; margin-top: 12px;">Clique pour accéder à l'infographie complète.</p>
         </div>
 
     </div>
