@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio numérique - Tiphaine Ducret</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2.5px solid #2563eb;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
+
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
+
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
+
+        .section {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px; color: #1f2937; margin-bottom: 16px;
+            padding-bottom: 12px; border-bottom: 2px solid #2563eb; font-weight: 700;
+        }
+
+        .section p {
+            font-size: 15px; line-height: 1.8; margin-bottom: 12px;
+            color: #4b5563; text-align: justify;
+        }
+
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #1f2937;
+        }
+        .highlight-box strong { color: #2563eb; }
+
+        .tags-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .tag {
+            background: #f0f4ff; color: #2563eb; border: 1px solid #c7d7fb;
+            padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-block; margin-top: 16px; padding: 12px 24px;
+            background: #2563eb; color: white; text-decoration: none;
+            border-radius: 8px; font-weight: 600; font-size: 15px; transition: opacity 0.2s;
+        }
+        .cta-button:hover { opacity: 0.85; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <a href="/#projects" class="back-link" onclick="sessionStorage.setItem('showS2', '1')">← Retour au portfolio</a>
+
+        <div class="header">
+            <h1>🎓 Création du portfolio numérique</h1>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>📅 Semestre</strong>
+                    2e semestre — 2026
+                </div>
+                <div class="meta-item">
+                    <strong>💼 Acquis professionnels</strong>
+                    HTML, CSS, Réflexivité, Communication
+                </div>
+                <div class="meta-item">
+                    <strong>⏱️ Temps estimé</strong>
+                    Tout au long du semestre
+                </div>
+                <div class="meta-item">
+                    <strong>📊 Niveau de difficulté</strong>
+                    Moyen
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objectif du projet</h2>
+            <p>Concevoir et développer un portfolio numérique personnel présentant mes projets, compétences et parcours en BUT Science des Données. L'objectif était triple : réaliser un travail réflexif sur mes apprentissages, apprendre les bases du HTML et CSS, et produire un site web professionnel hébergé sur GitHub Pages.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Compétences mises en œuvre</h2>
+            <ul>
+                <li>Création d'un site web complet en HTML et CSS</li>
+                <li>Hébergement sur GitHub Pages et gestion de versions</li>
+                <li>Conception d'une interface responsive et accessible</li>
+                <li>Rédaction de contenus clairs et structurés</li>
+                <li>Travail réflexif sur ses propres apprentissages</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 Résultats & Livrables</h2>
+            <p>Un portfolio en ligne accessible à l'adresse <a href="https://tiphaineducret.github.io" target="_blank" style="color: #2563eb; font-weight: 600;">tiphaineducret.github.io</a>, présentant les projets des deux semestres, une section parcours personnel, un bilan de l'année et le CV téléchargeable.</p>
+            <div class="tags-grid">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">GitHub Pages</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Design web</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Apprentissages clés</h2>
+            <p>Ce projet m'a permis de découvrir le développement web de façon autonome et concrète. J'ai appris que créer un bon site ne se résume pas au code : la hiérarchie de l'information, la lisibilité et la cohérence visuelle sont tout aussi importantes. Le travail réflexif sur mes propres projets m'a aussi aidée à mieux comprendre ce que j'avais vraiment appris cette année.</p>
+        </div>
+
+        <div class="section">
+            <h2>❤️ Ce que j'ai aimé</h2>
+            <p>J'ai adoré voir le site prendre forme progressivement et pouvoir le personnaliser à mon image. C'est gratifiant de construire quelque chose de concret qui me représente vraiment, et de partager mon parcours de façon professionnelle.</p>
+        </div>
+
+        <div class="section">
+            <h2>😟 Défis rencontrés</h2>
+            <p>Le principal défi était d'apprendre HTML et CSS en autonomie tout en produisant un résultat professionnel. Gérer la compatibilité entre les pages, le responsive design et les petits bugs d'affichage a demandé beaucoup de patience et de tests.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>💡 Contexte :</strong> Projet individuel évalué sur l'ergonomie et la forme (10 pts), la présentation des projets (10 pts), la section "À propos" (10 pts) et le bilan personnel (10 pts). Restitution le 15 juin 2026.
+        </div>
+
+        <div class="section">
+            <h2>🌐 Voir le portfolio</h2>
+            <p>Le portfolio est accessible en ligne sur GitHub Pages.</p>
+            <a href="https://tiphaineducret.github.io" target="_blank" class="cta-button">🌐 Visiter le portfolio</a>
+        </div>
+
+    </div>
+</body>
+</html>
