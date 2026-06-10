@@ -638,18 +638,6 @@
         <div class="hero-image">
             <img id="photoImg" src="image4.png" alt="Tiphaine Ducret">
         </div>
-
-        <div class="crop-controls">
-            <label for="photoInput" class="crop-label">📷 Choisir ta photo :</label>
-            <input type="file" id="photoInput" accept="image/*" onchange="loadPhoto(event)"
-                style="margin-bottom: 15px; padding: 8px; border: 1px solid var(--border); border-radius: 6px; width: 100%;">
-            <label for="cropSlider" class="crop-label">⬆️⬇️ Monter / Descendre la photo</label>
-            <div class="slider-container">
-                <input type="range" id="cropSlider" min="-30" max="30" value="0"
-                    onchange="adjustCrop(this.value)" oninput="adjustCrop(this.value)">
-                <span class="slider-value" id="cropValue">➡️ 0</span>
-            </div>
-        </div>
     </section>
 
     <!-- NAV -->
