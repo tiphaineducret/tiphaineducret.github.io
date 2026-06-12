@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse de données & Reporting - Tiphaine Ducret</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f9f5ff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2.5px solid #2563eb;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 { font-size: 22px; color: #1f2937; margin-bottom: 20px; font-weight: 600; }
+
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 15px; }
+
+        .meta-item { padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #2563eb; }
+        .meta-item strong { color: #1e40af; display: block; margin-bottom: 4px; }
+
+        .section {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px; color: #1f2937; margin-bottom: 16px;
+            padding-bottom: 12px; border-bottom: 2px solid #2563eb; font-weight: 700;
+        }
+
+        .section p {
+            font-size: 15px; line-height: 1.8; margin-bottom: 12px;
+            color: #4b5563; text-align: justify;
+        }
+
+        .section ul { margin-left: 20px; line-height: 1.8; font-size: 15px; color: #1f2937; }
+        .section ul li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%);
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #1f2937;
+        }
+        .highlight-box strong { color: #2563eb; }
+
+        .tags-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .tag {
+            background: #f0f4ff; color: #2563eb; border: 1px solid #c7d7fb;
+            padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-block; margin-top: 16px; padding: 12px 24px;
+            background: #e11d48; color: white; text-decoration: none;
+            border-radius: 8px; font-weight: 600; font-size: 15px; transition: opacity 0.2s;
+        }
+        .cta-button:hover { opacity: 0.85; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <a href="/#projects" class="back-link" onclick="sessionStorage.setItem('showS2', '1')">← Retour au portfolio</a>
+
+        <div class="header">
+            <h1>📉 Analyse de données & Reporting — Laboratoire Qualyse</h1>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>📅 Semestre</strong>
+                    2e semestre — Juin 2026
+                </div>
+                <div class="meta-item">
+                    <strong>💼 Rôle</strong>
+                    P2 — Développeur Interface
+                </div>
+                <div class="meta-item">
+                    <strong>⏱️ Temps estimé</strong>
+                    Plus de 70 heures
+                </div>
+                <div class="meta-item">
+                    <strong>📊 Niveau de difficulté</strong>
+                    Moyen à difficile
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objectif du projet</h2>
+            <p>Développer un outil dynamique pour le laboratoire Qualyse, laboratoire public d'analyses sanitaires basé près de Niort, permettant d'analyser les résultats de tests PCR bovins (mycoplasmes) depuis 2018. L'outil devait être utilisable par des biologistes sans aucune compétence technique, automatiser le traitement des données, classifier les cheptels en 8 classes selon leur statut longitudinal et produire un tableau de bord avec des indicateurs pertinents.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Compétences mises en œuvre</h2>
+            <ul>
+                <li>Développement d'interface graphique avec Python et CustomTkinter</li>
+                <li>Conception UX orientée utilisateur non technique</li>
+                <li>Gestion des imports de fichiers Excel avec validation et déduplication</li>
+                <li>Connexion entre modules (base SQLite, graphiques, export PDF)</li>
+                <li>Tests sur données réelles du commanditaire (fichiers 79 et 86)</li>
+                <li>Gestion de projet agile avec la méthode SCRUM</li>
+                <li>Présentation orale en anglais devant jury</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 Résultats & Livrables</h2>
+            <p>Un logiciel complet avec interface graphique permettant d'importer des fichiers Excel de résultats PCR, de les stocker dans une base SQLite, de classifier les cheptels et de générer un tableau de bord avec les indicateurs clés. L'interface constitue le point d'entrée de tout l'outil : les autres modules (graphiques, exports PDF, statistiques) se déclenchent depuis mes écrans.</p>
+            <div class="tags-grid">
+                <span class="tag">Python</span>
+                <span class="tag">CustomTkinter</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">SCRUM</span>
+                <span class="tag">Tableau de bord</span>
+                <span class="tag">UX</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Apprentissages clés</h2>
+            <p>Ce projet m'a fait comprendre une distinction fondamentale : coder une interface et concevoir une interface sont deux activités différentes. La partie la plus exigeante n'était pas la technique, mais de maintenir en permanence le point de vue de l'utilisateur final. J'ai aussi appris l'importance de tester avec de vraies données le plus tôt possible — les fichiers réels de Qualyse avaient des imperfections qu'aucune donnée fictive n'aurait révélées.</p>
+        </div>
+
+        <div class="section">
+            <h2>❤️ Ce que j'ai aimé</h2>
+            <p>J'ai adoré ce projet, malgré son intensité. Le moment le plus marquant a été la venue de M. Treilles à mi-parcours pour nous guider : avoir un vrai commanditaire qui nous explique ses besoins concrètement, c'est une expérience très enrichissante. Construire quelque chose d'utile pour des biologistes qui vont vraiment s'en servir donnait un sens fort à tout le travail. L'ambiance dans le groupe était aussi très bonne, ce qui a beaucoup aidé.</p>
+        </div>
+
+        <div class="section">
+            <h2>😟 Défis rencontrés</h2>
+            <p>Plus de 70 heures en deux semaines, c'est très intense. La validation sur les vrais fichiers Qualyse a révélé des problèmes invisibles en développement : encodages différents entre les fichiers 79 et 86, colonnes absentes ou renommées selon les années, valeurs "40" pas toujours reconnues. Chaque problème trouvé a demandé une correction immédiate pour ne pas bloquer toute l'équipe.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>💡 Contexte :</strong> Projet en groupe de 5 avec méthodologie SCRUM, restitution orale en anglais devant jury le 10 juin 2026. Commanditaire réel : M. Treilles, laboratoire Qualyse (Niort). Apprentissage critique retenu : correctement interpréter et prendre en compte le besoin du commanditaire.
+        </div>
+
+        <div class="section">
+            <h2>🎬 Vidéo de démonstration</h2>
+            <p>Découvre la démonstration complète du logiciel avec tous les tests et fonctionnalités.</p>
+            <a href="LIEN_VIDEO_ICI" target="_blank" class="cta-button">▶️ Voir la vidéo de démonstration</a>
+            <p style="font-size: 12px; color: #6b7280; margin-top: 12px;">Clique pour accéder à la vidéo YouTube complète.</p>
+        </div>
+
+    </div>
+</body>
+</html>
