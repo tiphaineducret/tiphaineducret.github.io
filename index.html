@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio SAé Tiphaine Ducret - BUT Science des Données</title>
+    <title>Portfolio SAE Tiphaine Ducret - BUT Science des Données</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary-blue: #2563eb;
@@ -74,13 +70,10 @@
             padding: 20px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
         }
 
-        .meta-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
+        .meta-item { display: flex; flex-direction: column; gap: 5px; }
 
         .meta-label {
             font-size: 0.85rem;
@@ -101,11 +94,7 @@
             border-top: 1px solid var(--border);
         }
 
-        .hero-skills-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        .hero-skills-badges { display: flex; flex-wrap: wrap; gap: 10px; }
 
         .hero-skill-badge {
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
@@ -136,69 +125,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.1s ease-out;
-        }
-
-        .crop-controls {
-            margin-top: 15px;
-            padding: 15px;
-            background: rgba(37, 99, 235, 0.05);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-
-        .crop-label {
-            display: block;
-            font-weight: 600;
-            color: var(--dark-text);
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-
-        .slider-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .slider-container input[type="range"] {
-            flex: 1;
-            height: 6px;
-            border-radius: 3px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-violet));
-            outline: none;
-            -webkit-appearance: none;
-            appearance: none;
-        }
-
-        .slider-container input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .slider-container input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .slider-value {
-            font-weight: 600;
-            color: var(--primary-blue);
-            min-width: 50px;
-            text-align: right;
-            font-size: 0.95rem;
         }
 
         /* NAV */
@@ -206,7 +132,7 @@
             display: flex;
             justify-content: center;
             gap: 40px;
-            padding: 40px 60px;
+            padding: 20px 60px;
             background: var(--white);
             border-bottom: 1px solid var(--border);
             position: sticky;
@@ -219,7 +145,7 @@
             text-decoration: none;
             color: var(--dark-text);
             font-weight: 700;
-            font-size: 1.35rem;
+            font-size: 1rem;
             position: relative;
             transition: color 0.3s;
         }
@@ -245,17 +171,12 @@
         }
 
         section {
-            padding: 100px 0;
-            border-bottom: 1px solid rgba(124, 58, 237, 0.15);
             background: white;
-            margin: 0 60px;
+            margin: 30px 40px;
             border-radius: 12px;
-            margin-bottom: 30px;
             padding: 60px;
             border: 1px solid rgba(124, 58, 237, 0.2);
         }
-
-        section:last-of-type { border-bottom: 1px solid rgba(124, 58, 237, 0.2); }
 
         h2 {
             font-size: 2.5rem;
@@ -277,70 +198,14 @@
             border-radius: 2px;
         }
 
-        #skills h2 { font-size: 3.2rem; }
+        /* SKILLS CAROUSEL */
+        #skills h2 { font-size: 2.5rem; }
 
         .skills-section {
             background: var(--white);
             padding: 40px;
             border-radius: 12px;
             border: 1px solid var(--border);
-        }
-
-        .skills-category { margin-bottom: 40px; }
-
-        .skills-category h3 {
-            font-size: 1.3rem;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .skill-row { margin-bottom: 20px; }
-
-        .skill-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .skill-level-text { color: var(--primary-blue); font-size: 0.9rem; }
-
-        .skill-bar {
-            background: #F3E8FF;
-            height: 6px;
-            border-radius: 3px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-violet));
-            border-radius: 3px;
-        }
-
-        .skills-badges {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill-badge {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary-blue);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            transition: all 0.3s;
-        }
-
-        .skill-badge:hover {
-            background: var(--primary-blue);
-            color: white;
-            border-color: var(--primary-blue);
         }
 
         .projects-intro {
@@ -385,7 +250,7 @@
 
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -404,7 +269,7 @@
         }
 
         .project-image {
-            height: 150px;
+            height: 120px;
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
             display: flex;
             align-items: center;
@@ -413,10 +278,10 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .project-body { padding: 25px; }
+        .project-body { padding: 20px; }
 
         .project-body h4 {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--dark-text);
             margin-bottom: 10px;
             font-weight: 700;
@@ -424,24 +289,19 @@
 
         .project-body p {
             color: var(--light-text);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 15px;
         }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
 
         .tag {
             background: rgba(37, 99, 235, 0.1);
             color: var(--primary-blue);
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 16px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             border: 1px solid rgba(37, 99, 235, 0.2);
         }
@@ -450,6 +310,7 @@
             color: var(--primary-blue);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
             transition: all 0.3s;
         }
 
@@ -472,7 +333,7 @@
 
         .engagement-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -493,7 +354,7 @@
 
         .engagement-card h3 {
             color: var(--dark-text);
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 8px;
             font-weight: 700;
         }
@@ -507,31 +368,23 @@
 
         .engagement-card p {
             color: var(--light-text);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
         }
 
         .bilan-content {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    min-height: 300px;
-    color: var(--light-text);
-    line-height: 1.8;
-}
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            color: var(--light-text);
+            line-height: 1.8;
+        }
 
-.bilan-content p {
-    margin-bottom: 20px;
-    text-align: justify;
-    line-height: 1.8;
-}
-
-        .word-count {
-            font-size: 0.85rem;
-            color: var(--primary-blue);
-            margin-top: 20px;
-            font-weight: 600;
+        .bilan-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.8;
         }
 
         .cv-content {
@@ -543,6 +396,8 @@
         }
 
         .cv-button {
+            display: inline-block;
+            text-decoration: none;
             background: linear-gradient(135deg, var(--primary-blue), var(--primary-violet));
             color: white;
             padding: 14px 40px;
@@ -553,6 +408,7 @@
             cursor: pointer;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            margin: 8px;
         }
 
         .cv-button:hover {
@@ -562,7 +418,7 @@
 
         footer {
             background: var(--white);
-            padding: 50px;
+            padding: 40px;
             text-align: center;
             border-top: 1px solid var(--border);
             color: var(--light-text);
@@ -574,29 +430,68 @@
             color: var(--primary-blue);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s;
         }
 
         footer a:hover { color: var(--primary-violet); }
 
+        /* ========== RESPONSIVE TABLET ========== */
         @media (max-width: 1024px) {
             .hero { grid-template-columns: 1fr; padding: 60px 40px; gap: 40px; }
-            nav { padding: 20px 40px; gap: 20px; }
-            .container { padding: 0 40px; }
             .hero-image { height: 400px; }
+            section { margin: 20px 20px; padding: 40px 30px; }
+            nav { padding: 15px 30px; gap: 20px; }
         }
 
+        /* ========== RESPONSIVE MOBILE ========== */
         @media (max-width: 640px) {
-            .hero { padding: 40px 20px; }
-            nav { padding: 15px 20px; gap: 15px; }
-            .container { padding: 0 20px; }
-            h2 { font-size: 2rem; }
-            section { padding: 60px 0; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+                gap: 30px;
+            }
+
             .hero-content h1 { font-size: 2rem; }
-            .hero-meta { flex-direction: column; gap: 15px; }
-            .semestre-buttons { flex-direction: column; }
-            .semestre-btn { width: 100%; }
+            .hero-content p { font-size: 0.95rem; }
+            .hero-image { height: 280px; border-radius: 12px; }
+
+            .hero-meta { flex-direction: column; gap: 12px; }
+
+            nav {
+                padding: 12px 15px;
+                gap: 10px;
+                justify-content: space-around;
+            }
+
+            nav a { font-size: 0.8rem; }
+
+            section {
+                margin: 15px 10px;
+                padding: 30px 20px;
+                border-radius: 8px;
+            }
+
+            h2 { font-size: 1.6rem; margin-bottom: 30px; }
+
+            /* Skills carousel mobile */
+            #cardsContainer > div {
+                flex: 0 0 85vw !important;
+            }
+
+            .semestre-buttons { flex-direction: column; align-items: center; }
+            .semestre-btn { width: 100%; max-width: 300px; }
+
             .projects-container { grid-template-columns: 1fr; }
+
+            .parcours-text { padding: 20px; }
+
+            .engagement-grid { grid-template-columns: 1fr; }
+
+            .bilan-content { padding: 20px; }
+
+            .cv-content { padding: 20px; }
+            .cv-button { display: block; margin: 8px auto; width: 100%; max-width: 280px; }
+
+            footer { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -606,7 +501,7 @@
         <div class="hero-content">
             <h1>Bonjour, je suis <span class="title-accent">Tiphaine</span></h1>
             <p>Étudiante en BUT Science des Données, je suis passionnée par l'analyse de données et les statistiques. J'adore manipuler les chiffres et les visualiser dans un contexte professionnel. C'est fascinant de voir comment les données racontent une histoire et permettent de découvrir des informations importantes. Je suis rigoureuse dans ma méthode, persévérante face aux défis, et créative dans mes solutions. Ce qui m'intéresse vraiment, c'est de relever des défis analytiques qui ont du sens et créent de la valeur.</p>
-            
+
             <div class="hero-meta">
                 <div class="meta-item">
                     <div class="meta-label">Formation</div>
@@ -655,8 +550,8 @@
             <h2>Compétences techniques</h2>
             <div style="position: relative; overflow: hidden;">
                 <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 48px; font-weight: 700; animation: bounce 2s infinite; pointer-events: none; z-index: 10; text-shadow: 0 2px 8px rgba(0,0,0,0.1);">→</div>
-                <div id="cardsContainer" style="display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding: 10px 0;" draggable="false">
-                    <div style="flex: 0 0 calc(45% - 10px); min-width: 0; background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
+                <div id="cardsContainer" style="display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding: 10px 0; -webkit-overflow-scrolling: touch;">
+                    <div style="flex: 0 0 calc(45% - 10px); min-width: 280px; background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #1e40af; margin-bottom: 32px; letter-spacing: 0.3px;">Langages de programmation</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(37, 99, 235, 0.1);"><strong style="color: #1e40af; font-size: 16px;">Python</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Traitement de données avec pandas, visualisations avec matplotlib et seaborn</span></div>
@@ -667,7 +562,7 @@
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937;"><strong style="color: #1e40af; font-size: 16px;">HTML & CSS</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Création de sites web responsifs - mon portfolio en est l'exemple</span></div>
                         </div>
                     </div>
-                    <div style="flex: 0 0 calc(45% - 10px); background: linear-gradient(135deg, #faf5ff 0%, #f5f0ff 100%); border: 2.5px solid #7c3aed; border-radius: 16px; padding: 40px 36px;">
+                    <div style="flex: 0 0 calc(45% - 10px); min-width: 280px; background: linear-gradient(135deg, #faf5ff 0%, #f5f0ff 100%); border: 2.5px solid #7c3aed; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #6d28d9; margin-bottom: 32px; letter-spacing: 0.3px;">Outils & logiciels</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.1);"><strong style="color: #6d28d9; font-size: 15px;">Excel & Google Sheets</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Analyse, tableaux de synthèse et visualisations simples</span></div>
@@ -676,7 +571,7 @@
                             <div style="line-height: 1.8; font-size: 15px; color: #1f2937;"><strong style="color: #6d28d9; font-size: 15px;">Sphinx</strong><br><span style="color: #1f2937; font-size: 15px; margin-top: 4px; display: block;">Conception et diffusion de questionnaires d'enquête</span></div>
                         </div>
                     </div>
-                    <div style="flex: 0 0 calc(45% - 10px); background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
+                    <div style="flex: 0 0 calc(45% - 10px); min-width: 280px; background: linear-gradient(135deg, #f0f4ff 0%, #f8f5ff 100%); border: 2.5px solid #2563eb; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #1e40af; margin-bottom: 32px; letter-spacing: 0.3px;">Analyse statistique</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(37, 99, 235, 0.1);">Statistiques descriptives (moyenne, écart-type, quartiles...)</div>
@@ -685,7 +580,7 @@
                             <div style="line-height: 1.8; font-size: 15px; color: #1f2937;">Visualisation graphique des résultats</div>
                         </div>
                     </div>
-                    <div style="flex: 0 0 calc(45% - 10px); background: linear-gradient(135deg, #faf5ff 0%, #f5f0ff 100%); border: 2.5px solid #7c3aed; border-radius: 16px; padding: 40px 36px;">
+                    <div style="flex: 0 0 calc(45% - 10px); min-width: 280px; background: linear-gradient(135deg, #faf5ff 0%, #f5f0ff 100%); border: 2.5px solid #7c3aed; border-radius: 16px; padding: 40px 36px;">
                         <div style="font-weight: 600; font-size: 20px; color: #6d28d9; margin-bottom: 32px; letter-spacing: 0.3px;">Qualités personnelles</div>
                         <div style="display: flex; flex-direction: column; gap: 28px;">
                             <div style="line-height: 1.8; font-size: 16px; color: #1f2937; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.1);">Esprit d'équipe et communication</div>
@@ -717,182 +612,119 @@
                     <div class="project-body">
                         <h4>Création d'un reporting</h4>
                         <p>Écriture et lecture de fichiers de données. Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire.</p>
-                        <div class="tags">
-                            <span class="tag">Excel</span>
-                            <span class="tag">VBA</span>
-                            <span class="tag">Tableau de bord</span>
-                        </div>
+                        <div class="tags"><span class="tag">Excel</span><span class="tag">VBA</span><span class="tag">Tableau de bord</span></div>
                         <a href="projets/S1/projet1/s1-projet1.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">📝</div>
                     <div class="project-body">
                         <h4>Écriture et lecture de fichiers</h4>
                         <p>Maîtrise des formats de fichiers (CSV, Excel, JSON). Gestion efficace des données importées et exportées.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">JSON</span>
-                            <span class="tag">Traitement des données</span>
-                        </div>
+                        <div class="tags"><span class="tag">Python</span><span class="tag">JSON</span><span class="tag">Traitement des données</span></div>
                         <a href="projets/S1/projet2/s1-projet2.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">🔍</div>
                     <div class="project-body">
                         <h4>Analyse exploratoire simple</h4>
                         <p>Préparation et synthèse d'un tableau de données. Nettoyage, transformation et première exploration visuelle.</p>
-                        <div class="tags">
-                            <span class="tag">Enquête</span>
-                            <span class="tag">Analyse</span>
-                            <span class="tag">Rapport</span>
-                        </div>
+                        <div class="tags"><span class="tag">Enquête</span><span class="tag">Analyse</span><span class="tag">Rapport</span></div>
                         <a href="projets/S1/projet3/s1-projet3.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">🏢</div>
                     <div class="project-body">
                         <h4>Production de données en entreprise</h4>
                         <p>Analyse du réarmement démographique à partir des données INSEE. Rapport professionnel sur les communes à haute natalité.</p>
-                        <div class="tags">
-                            <span class="tag">INSEE</span>
-                            <span class="tag">Statistiques</span>
-                            <span class="tag">Rapport</span>
-                        </div>
+                        <div class="tags"><span class="tag">INSEE</span><span class="tag">Statistiques</span><span class="tag">Rapport</span></div>
                         <a href="projets/S1/projet4/s1-projet4.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">🌍</div>
                     <div class="project-body">
-                        <h4>Présentation en anglais d'un territoire économique et culturel</h4>
+                        <h4>Présentation en anglais d'un territoire</h4>
                         <p>Présentation en anglais d'un territoire économique et culturel. Compétences de communication professionnelle internationale.</p>
-                        <div class="tags">
-                            <span class="tag">Anglais</span>
-                            <span class="tag">Présentation</span>
-                            <span class="tag">PowerPoint</span>
-                        </div>
+                        <div class="tags"><span class="tag">Anglais</span><span class="tag">Présentation</span><span class="tag">PowerPoint</span></div>
                         <a href="projets/S1/projet5/s1-projet5.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">📋</div>
                     <div class="project-body">
                         <h4>Mise en œuvre d'une enquête</h4>
                         <p>Conception et réalisation d'une enquête sur les jeunes et les réseaux sociaux. Cahier des charges, organigramme et questionnaire.</p>
-                        <div class="tags">
-                            <span class="tag">Sphinx</span>
-                            <span class="tag">Enquête</span>
-                            <span class="tag">Méthodologie</span>
-                        </div>
+                        <div class="tags"><span class="tag">Sphinx</span><span class="tag">Enquête</span><span class="tag">Méthodologie</span></div>
                         <a href="projets/S1/projet6/s1-projet6.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
             </div>
 
             <!-- S2 -->
-           <div id="s2-projects" id="projects-s2" class="projects-container" style="display: none;">
+            <div id="s2-projects" class="projects-container" style="display: none;">
                 <div class="project-card">
                     <div class="project-image">🗄️</div>
                     <div class="project-body">
                         <h4>Conception et implémentation BD</h4>
                         <p>Conception de base de données relationnelle. Implémentation SQL avancée avec respect des bonnes pratiques.</p>
-                        <div class="tags">
-                            <span class="tag">SQL</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Database Design</span>
-                        </div>
+                        <div class="tags"><span class="tag">SQL</span><span class="tag">EasyPHP</span><span class="tag">Python Tkinter</span></div>
                         <a href="projets/S2/projet1/s2-projet1.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">📊</div>
                     <div class="project-body">
                         <h4>Estimation par échantillonnage</h4>
                         <p>Techniques d'échantillonnage statistique. Estimation de paramètres sur données réelles avec intervalles de confiance.</p>
-                        <div class="tags">
-                            <span class="tag">R</span>
-                            <span class="tag">Excel</span>
-                            <span class="tag">Stat. inférentielle</span>
-                        </div>
+                        <div class="tags"><span class="tag">R</span><span class="tag">Excel</span><span class="tag">Stat. inférentielle</span></div>
                         <a href="projets/S2/projet2/s2-projet2.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">📈</div>
                     <div class="project-body">
                         <h4>Régression sur données réelles</h4>
                         <p>Modélisation des prix immobiliers de l'agglomération niortaise. Régression linéaire, segmentation et prédiction sur données réelles.</p>
-                        <div class="tags">
-                            <span class="tag">Régression linéaire</span>
-                            <span class="tag">R</span>
-                            <span class="tag">Modélisation</span>
-                        </div>
+                        <div class="tags"><span class="tag">Régression linéaire</span><span class="tag">R</span><span class="tag">Modélisation</span></div>
                         <a href="projets/S2/projet3/s2-projet3.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">🎨</div>
                     <div class="project-body">
                         <h4>Dataviz (concours)</h4>
-                        <p>Création de visualisations de données pour un concours. Focus sur l'impact visuel et la communication des insights.</p>
-                        <div class="tags">
-                            <span class="tag">Matplotlib</span>
-                            <span class="tag">Dataviz</span>
-                            <span class="tag">Design</span>
-                        </div>
+                        <p>Infographie sur la démographie rurale en Auvergne-Rhône-Alpes. Challenge Data Viz en une journée, données INSEE.</p>
+                        <div class="tags"><span class="tag">INSEE</span><span class="tag">Dataviz</span><span class="tag">Canva</span></div>
                         <a href="projets/S2/projet4/s2-projet4.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">📊</div>
                     <div class="project-body">
                         <h4>Construction d'indicateurs KPI</h4>
                         <p>Construction et présentation d'indicateurs de performance. Tableaux de bord interactifs pour la prise de décision.</p>
-                        <div class="tags">
-                            <span class="tag">KPI</span>
-                            <span class="tag">Dashboards</span>
-                            <span class="tag">BI</span>
-                        </div>
+                        <div class="tags"><span class="tag">KPI</span><span class="tag">Dashboards</span><span class="tag">BI</span></div>
                         <a href="projets/S2/projet5/s2-projet5.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">📉</div>
                     <div class="project-body">
                         <h4>Analyse de données & Reporting</h4>
                         <p>Outil dynamique d'analyse des tests PCR bovins pour le laboratoire Qualyse. Tableau de bord, classification des cheptels et statistiques.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">Tkinter</span>
-                        </div>
+                        <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Tkinter</span></div>
                         <a href="projets/S2/projet6/s2-projet6.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">🎓</div>
                     <div class="project-body">
                         <h4>Portfolio</h4>
                         <p>Création de ce portfolio. Présentation synthétique des apprentissages, projets et évolution professionnelle.</p>
-                        <div class="tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">Web</span>
-                            <span class="tag">Portfolio</span>
-                        </div>
+                        <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">Web</span><span class="tag">Portfolio</span></div>
                         <a href="projets/S2/projet7/s2-projet7.html" class="project-link">→ Voir le détail</a>
                     </div>
                 </div>
@@ -912,71 +744,57 @@
 
             <h3 style="color: var(--dark-text); margin: 50px 0 30px; font-size: 1.5rem; font-weight: 700;">Mes engagements</h3>
 
-<div class="engagement-grid">
-
-    <div class="engagement-card">
-        <h3>🌍 Projet mémoire sur l'Europe</h3>
-        <div class="engagement-date">Collège</div>
-        <p>Réalisation d'un projet mémoire autour de plusieurs pays européens : la France, l'Allemagne, le Luxembourg et la Belgique. Ce travail m'a permis de développer mes capacités de recherche, de synthèse et d'ouverture culturelle.</p>
-    </div>
-
-    <div class="engagement-card">
-        <h3>🎲 Engagement à la médiathèque du Tampon</h3>
-        <div class="engagement-date">La Réunion</div>
-        <p>Participation aux activités « Parole en jeux », un espace d'échange autour des jeux et de la discussion. Cette expérience m'a permis de développer mon sens du contact, l'écoute et la communication avec différents publics.</p>
-    </div>
-
-    <div class="engagement-card">
-        <h3>🏥 Étudiante relais santé</h3>
-        <div class="engagement-date">Depuis 2025</div>
-        <p>Sensibilisation aux questions de santé sur le campus et participation à des actions de prévention auprès des étudiants.</p>
-    </div>
-
-    <div class="engagement-card">
-        <h3>📚 Cours particuliers en mathématiques</h3>
-        <div class="engagement-date">Depuis 2025</div>
-        <p>Accompagnement d'élèves de niveaux 4e et 1re pour consolider les bases en mathématiques et adapter les explications selon les besoins. </p>
-    </div>
-
-    <div class="engagement-card">
-        <h3>🎨 Activités créatives</h3>
-        <div class="engagement-date">Centres d'intérêt</div>
-        <p>Pratique de la danse, du crochet et de la création textile. Ces activités développent ma créativité, ma patience et ma concentration.</p>
-    </div>
-
-    <div class="engagement-card">
-    <h3>🎖️ Engagement citoyen & Défense</h3>
-    <div class="engagement-date">Centres d'intérêt</div>
-    <p>Actions associatives et commémoratives, échanges avec des acteurs du service civique et de la Défense (FAZSOI, 2RPIMa, RSMA-R). Un engagement qui nourrit ma rigueur et mon sens des responsabilités.</p>
-</div>
-
-<div class="engagement-card">
-    <h3>🏛️ Culture & ouverture</h3>
-    <div class="engagement-date">Centres d'intérêt</div>
-    <p>Intérêt pour les musées, les échanges culturels et internationaux. La curiosité intellectuelle et l'ouverture au monde font partie de ma manière d'apprendre et de grandir.</p>
-</div>
-
-</div>
+            <div class="engagement-grid">
+                <div class="engagement-card">
+                    <h3>🌍 Projet mémoire sur l'Europe</h3>
+                    <div class="engagement-date">Collège</div>
+                    <p>Réalisation d'un projet mémoire autour de plusieurs pays européens : la France, l'Allemagne, le Luxembourg et la Belgique. Ce travail m'a permis de développer mes capacités de recherche, de synthèse et d'ouverture culturelle.</p>
+                </div>
+                <div class="engagement-card">
+                    <h3>🎲 Engagement à la médiathèque du Tampon</h3>
+                    <div class="engagement-date">La Réunion</div>
+                    <p>Participation aux activités « Parole en jeux », un espace d'échange autour des jeux et de la discussion. Cette expérience m'a permis de développer mon sens du contact, l'écoute et la communication avec différents publics.</p>
+                </div>
+                <div class="engagement-card">
+                    <h3>🏥 Étudiante relais santé</h3>
+                    <div class="engagement-date">Depuis 2025</div>
+                    <p>Sensibilisation aux questions de santé sur le campus et participation à des actions de prévention auprès des étudiants.</p>
+                </div>
+                <div class="engagement-card">
+                    <h3>📚 Cours particuliers en mathématiques</h3>
+                    <div class="engagement-date">Depuis 2025</div>
+                    <p>Accompagnement d'élèves de niveaux 4e et 1re pour consolider les bases en mathématiques et adapter les explications selon les besoins.</p>
+                </div>
+                <div class="engagement-card">
+                    <h3>🎨 Activités créatives</h3>
+                    <div class="engagement-date">Centres d'intérêt</div>
+                    <p>Pratique de la danse, du crochet et de la création textile. Ces activités développent ma créativité, ma patience et ma concentration.</p>
+                </div>
+                <div class="engagement-card">
+                    <h3>🎖️ Engagement citoyen & Défense</h3>
+                    <div class="engagement-date">Centres d'intérêt</div>
+                    <p>Actions associatives et commémoratives, échanges avec des acteurs du service civique et de la Défense (FAZSOI, 2RPIMa, RSMA-R). Un engagement qui nourrit ma rigueur et mon sens des responsabilités.</p>
+                </div>
+                <div class="engagement-card">
+                    <h3>🏛️ Culture & ouverture</h3>
+                    <div class="engagement-date">Centres d'intérêt</div>
+                    <p>Intérêt pour les musées, les échanges culturels et internationaux. La curiosité intellectuelle et l'ouverture au monde font partie de ma manière d'apprendre et de grandir.</p>
+                </div>
+            </div>
         </section>
 
         <!-- BILAN -->
         <section id="bilan">
             <h2>Bilan personnel de l'année</h2>
             <div class="bilan-content">
-    <p>Cette première année en BUT Science des Données a été pour moi une véritable révélation. Arrivée sans aucune expérience en programmation, je repars avec des compétences concrètes en Python, SQL, R, et bien d'autres outils que je n'aurais pas imaginé maîtriser il y a un an. Cette montée en compétences est sans doute ce qui me rend la plus fière de cette année.</p>
-
-    <p>Au début, tout semblait nouveau et parfois intimidant. Écrire mes premières lignes de code, comprendre la logique derrière une base de données relationnelle, ou encore modéliser des données statistiques avec R, ce sont des choses qui paraissaient abstraites au départ. Mais projet après projet, j'ai compris que la programmation n'est pas une fin en soi, c'est un outil puissant au service d'une question, d'une problématique réelle. C'est cette dimension concrète qui m'a le plus enthousiasmée : on ne code pas dans le vide, on répond à quelque chose.</p>
-
-    <p>Le plus grand défi de cette année a été de gérer simultanément les projets à rendre et les révisions pour les examens. Le rythme est soutenu, et il faut apprendre à prioriser, à planifier, à ne pas se laisser déborder. J'ai assez bien réussi à m'organiser, en découpant le travail en étapes et en anticipant les échéances. Cette capacité d'organisation s'est d'ailleurs renforcée au fil des semestres et je la considère aujourd'hui comme une vraie compétence professionnelle.</p>
-
-    <p>Ce qui m'a également aidée tout au long de l'année, c'est la passion. Je n'ai pas vraiment connu de moment de doute profond, parce que chaque nouveau sujet abordé nourrissait ma curiosité plutôt que de la décourager. Que ce soit l'analyse de données INSEE, la conception d'une base de données pour une entreprise de logistique, ou encore la création d'une infographie sur la démographie rurale, chaque projet m'a donné envie d'aller plus loin. La data science, c'est la rencontre entre les mathématiques que j'ai toujours aimées et des problématiques qui ont du sens dans le monde réel, et c'est exactement ce que je cherchais.</p>
-
-    <p>Aujourd'hui, je me sens bien plus confiante qu'en septembre. Confiante dans mes capacités techniques, mais aussi dans ma manière d'aborder un problème : savoir chercher, structurer, analyser, communiquer les résultats. Cette confiance, je la dois aussi à l'équipe pédagogique. Les professeurs sont vraiment investis, disponibles, et créent une atmosphère dans laquelle on se sent soutenu et encouragé. C'est une vraie chance d'évoluer dans cet environnement, et cela a beaucoup contribué à ma progression.</p>
-
-    <p>Pour la suite, je me projette dans des domaines où les données ont un impact sociétal fort. L'INSEE m'attire particulièrement, ainsi que le secteur de la défense, où l'analyse de données contribue à des enjeux stratégiques réels. Ce qui est certain, c'est que je veux continuer à travailler sur des données concrètes, avec une vraie portée, qu'elle soit économique, démographique ou sociale.</p>
-
-    <p>Cette année a posé des bases solides. Je repars avec des outils, une méthode, et surtout une envie intacte d'apprendre et de progresser.</p>
-</div>
+                <p>Cette première année en BUT Science des Données a été pour moi une véritable révélation. Arrivée sans aucune expérience en programmation, je repars avec des compétences concrètes en Python, SQL, R, et bien d'autres outils que je n'aurais pas imaginé maîtriser il y a un an. Cette montée en compétences est sans doute ce qui me rend la plus fière de cette année.</p>
+                <p>Au début, tout semblait nouveau et parfois intimidant. Écrire mes premières lignes de code, comprendre la logique derrière une base de données relationnelle, ou encore modéliser des données statistiques avec R, ce sont des choses qui paraissaient abstraites au départ. Mais projet après projet, j'ai compris que la programmation n'est pas une fin en soi, c'est un outil puissant au service d'une question, d'une problématique réelle. C'est cette dimension concrète qui m'a le plus enthousiasmée : on ne code pas dans le vide, on répond à quelque chose.</p>
+                <p>Le plus grand défi de cette année a été de gérer simultanément les projets à rendre et les révisions pour les examens. Le rythme est soutenu, et il faut apprendre à prioriser, à planifier, à ne pas se laisser déborder. J'ai assez bien réussi à m'organiser, en découpant le travail en étapes et en anticipant les échéances. Cette capacité d'organisation s'est d'ailleurs renforcée au fil des semestres et je la considère aujourd'hui comme une vraie compétence professionnelle.</p>
+                <p>Ce qui m'a également aidée tout au long de l'année, c'est la passion. Je n'ai pas vraiment connu de moment de doute profond, parce que chaque nouveau sujet abordé nourrissait ma curiosité plutôt que de la décourager. Que ce soit l'analyse de données INSEE, la conception d'une base de données pour une entreprise de logistique, ou encore la création d'une infographie sur la démographie rurale, chaque projet m'a donné envie d'aller plus loin. La data science, c'est la rencontre entre les mathématiques que j'ai toujours aimées et des problématiques qui ont du sens dans le monde réel, et c'est exactement ce que je cherchais.</p>
+                <p>Aujourd'hui, je me sens bien plus confiante qu'en septembre. Confiante dans mes capacités techniques, mais aussi dans ma manière d'aborder un problème : savoir chercher, structurer, analyser, communiquer les résultats. Cette confiance, je la dois aussi à l'équipe pédagogique. Les professeurs sont vraiment investis, disponibles, et créent une atmosphère dans laquelle on se sent soutenu et encouragé. C'est une vraie chance d'évoluer dans cet environnement, et cela a beaucoup contribué à ma progression.</p>
+                <p>Pour la suite, je me projette dans des domaines où les données ont un impact sociétal fort. L'INSEE m'attire particulièrement, ainsi que le secteur de la défense, où l'analyse de données contribue à des enjeux stratégiques réels. Ce qui est certain, c'est que je veux continuer à travailler sur des données concrètes, avec une vraie portée, qu'elle soit économique, démographique ou sociale.</p>
+                <p>Cette année a posé des bases solides. Je repars avec des outils, une méthode, et surtout une envie intacte d'apprendre et de progresser.</p>
+            </div>
         </section>
 
         <!-- CV -->
@@ -993,38 +811,13 @@
     <!-- FOOTER -->
     <footer>
         <p><strong>Portfolio SAE BUT Science des Données 2025-2028</strong></p>
-<p><a href="mailto:ducret.t974@gmail.com">ducret.t974@gmail.com</a></p>
+        <p><a href="mailto:ducret.t974@gmail.com">ducret.t974@gmail.com</a></p>
     </footer>
 
     <script>
-        function loadPhoto(event) {
-            const file = event.target.files[0];
-            if (file) {
-                if (file.size > 5 * 1024 * 1024) { alert('⚠️ Le fichier est trop volumineux ! (max 5 MB)'); return; }
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const photoImg = document.getElementById('photoImg');
-                    photoImg.src = e.target.result;
-                    document.getElementById('cropSlider').value = 0;
-                    adjustCrop(0);
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function adjustCrop(value) {
-            const photoImg = document.getElementById('photoImg');
-            const cropValue = document.getElementById('cropValue');
-            const position = 50 + (value / 30 * 50);
-            photoImg.style.objectPosition = `center ${position}%`;
-            if (value > 0) { cropValue.textContent = '⬇️ ' + value; }
-            else if (value < 0) { cropValue.textContent = '⬆️ ' + Math.abs(value); }
-            else { cropValue.textContent = '➡️ 0'; }
-        }
-
         function initCarousel() {
             const container = document.getElementById('cardsContainer');
-            let isDown = false, startX = 0, scrollLeft = 0, velocity = 0, lastX = 0, lastTime = 0;
+            let isDown = false, startX = 0, scrollLeft = 0, lastX = 0, lastTime = 0;
             container.addEventListener('mousedown', (e) => {
                 isDown = true; startX = e.pageX - container.offsetLeft;
                 scrollLeft = container.scrollLeft; lastX = e.pageX; lastTime = Date.now();
@@ -1034,28 +827,23 @@
             document.addEventListener('mousemove', (e) => {
                 if (!isDown) return; e.preventDefault();
                 const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 1.2;
-                container.scrollLeft = scrollLeft - walk;
-                const currentTime = Date.now(); const timeDiff = currentTime - lastTime;
-                if (timeDiff > 0) { velocity = (lastX - e.pageX) / timeDiff; }
-                lastX = e.pageX; lastTime = currentTime;
+                container.scrollLeft = scrollLeft - (x - startX) * 1.2;
             });
             container.addEventListener('wheel', (e) => { e.preventDefault(); container.scrollLeft += e.deltaX; }, { passive: false });
         }
 
         document.addEventListener('DOMContentLoaded', initCarousel);
 
-        // Détection du semestre à afficher selon l'URL
-window.addEventListener('load', function() {
-    if (sessionStorage.getItem('showS2') === '1') {
-        sessionStorage.removeItem('showS2');
-        const s2btn = document.querySelectorAll('.semestre-btn')[1];
-        showSemestre('s2', s2btn);
-        setTimeout(() => {
-            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-        }, 200);
-    }
-});
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('showS2') === '1') {
+                sessionStorage.removeItem('showS2');
+                const s2btn = document.querySelectorAll('.semestre-btn')[1];
+                showSemestre('s2', s2btn);
+                setTimeout(() => {
+                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                }, 200);
+            }
+        });
 
         function showSemestre(semestre, button) {
             document.getElementById('s1-projects').style.display = 'none';
