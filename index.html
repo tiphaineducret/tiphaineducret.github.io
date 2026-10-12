@@ -307,14 +307,58 @@
         }
 
         .project-link {
+            display: inline-grid;
+            grid-template-columns: auto 42px;
+            align-items: center;
+            column-gap: 14px;
+            min-height: 44px;
+            padding-left: 16px;
+            border: 1px solid var(--primary-blue);
             color: var(--primary-blue);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
         }
 
-        .project-link:hover { color: var(--primary-violet); }
+        .project-link:hover { background: var(--primary-blue); color: var(--white); }
+        .project-link:active { background: var(--dark-text); border-color: var(--dark-text); }
+        .project-link:focus-visible { outline: 3px solid var(--primary-violet); outline-offset: 3px; }
+
+        .project-link__icon {
+            position: relative;
+            align-self: stretch;
+            width: 42px;
+            border-left: 1px solid currentColor;
+            transition: transform 0.2s ease;
+        }
+
+        .project-link__icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            width: 15px;
+            height: 1px;
+            background: currentColor;
+            transform: translateY(-50%);
+        }
+
+        .project-link__icon::after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 4px);
+            right: 13px;
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid currentColor;
+            border-right: 1px solid currentColor;
+            transform: rotate(45deg);
+        }
+
+        .project-link:hover .project-link__icon { transform: translateX(2px); }
 
         .parcours-text {
             background: var(--white);
@@ -613,7 +657,7 @@
                         <h4>Création d'un reporting</h4>
                         <p>Écriture et lecture de fichiers de données. Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire.</p>
                         <div class="tags"><span class="tag">Excel</span><span class="tag">VBA</span><span class="tag">Tableau de bord</span></div>
-                        <a href="projets/S1/projet1/s1-projet1.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S1/projet1/s1-projet1.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -622,7 +666,7 @@
                         <h4>Écriture et lecture de fichiers</h4>
                         <p>Maîtrise des formats de fichiers (CSV, Excel, JSON). Gestion efficace des données importées et exportées.</p>
                         <div class="tags"><span class="tag">Python</span><span class="tag">JSON</span><span class="tag">Traitement des données</span></div>
-                        <a href="projets/S1/projet2/s1-projet2.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S1/projet2/s1-projet2.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -631,7 +675,7 @@
                         <h4>Analyse exploratoire simple</h4>
                         <p>Préparation et synthèse d'un tableau de données. Nettoyage, transformation et première exploration visuelle.</p>
                         <div class="tags"><span class="tag">Enquête</span><span class="tag">Analyse</span><span class="tag">Rapport</span></div>
-                        <a href="projets/S1/projet3/s1-projet3.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S1/projet3/s1-projet3.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -640,7 +684,7 @@
                         <h4>Production de données en entreprise</h4>
                         <p>Analyse du réarmement démographique à partir des données INSEE. Rapport professionnel sur les communes à haute natalité.</p>
                         <div class="tags"><span class="tag">INSEE</span><span class="tag">Statistiques</span><span class="tag">Rapport</span></div>
-                        <a href="projets/S1/projet4/s1-projet4.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S1/projet4/s1-projet4.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -649,7 +693,7 @@
                         <h4>Présentation en anglais d'un territoire</h4>
                         <p>Présentation en anglais d'un territoire économique et culturel. Compétences de communication professionnelle internationale.</p>
                         <div class="tags"><span class="tag">Anglais</span><span class="tag">Présentation</span><span class="tag">PowerPoint</span></div>
-                        <a href="projets/S1/projet5/s1-projet5.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S1/projet5/s1-projet5.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -658,7 +702,7 @@
                         <h4>Mise en œuvre d'une enquête</h4>
                         <p>Conception et réalisation d'une enquête sur les jeunes et les réseaux sociaux. Cahier des charges, organigramme et questionnaire.</p>
                         <div class="tags"><span class="tag">Sphinx</span><span class="tag">Enquête</span><span class="tag">Méthodologie</span></div>
-                        <a href="projets/S1/projet6/s1-projet6.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S1/projet6/s1-projet6.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
             </div>
@@ -671,7 +715,7 @@
                         <h4>Conception et implémentation BD</h4>
                         <p>Conception de base de données relationnelle. Implémentation SQL avancée avec respect des bonnes pratiques.</p>
                         <div class="tags"><span class="tag">SQL</span><span class="tag">EasyPHP</span><span class="tag">Python Tkinter</span></div>
-                        <a href="projets/S2/projet1/s2-projet1.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet1/s2-projet1.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -680,7 +724,7 @@
                         <h4>Estimation par échantillonnage</h4>
                         <p>Techniques d'échantillonnage statistique. Estimation de paramètres sur données réelles avec intervalles de confiance.</p>
                         <div class="tags"><span class="tag">R</span><span class="tag">Excel</span><span class="tag">Stat. inférentielle</span></div>
-                        <a href="projets/S2/projet2/s2-projet2.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet2/s2-projet2.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -689,7 +733,7 @@
                         <h4>Régression sur données réelles</h4>
                         <p>Modélisation des prix immobiliers de l'agglomération niortaise. Régression linéaire, segmentation et prédiction sur données réelles.</p>
                         <div class="tags"><span class="tag">Régression linéaire</span><span class="tag">R</span><span class="tag">Modélisation</span></div>
-                        <a href="projets/S2/projet3/s2-projet3.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet3/s2-projet3.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -698,7 +742,7 @@
                         <h4>Dataviz (concours)</h4>
                         <p>Infographie sur la démographie rurale en Auvergne-Rhône-Alpes. Challenge Data Viz en une journée, données INSEE.</p>
                         <div class="tags"><span class="tag">INSEE</span><span class="tag">Dataviz</span><span class="tag">Canva</span></div>
-                        <a href="projets/S2/projet4/s2-projet4.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet4/s2-projet4.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -707,7 +751,7 @@
                         <h4>Construction d'indicateurs KPI</h4>
                         <p>Construction et présentation d'indicateurs de performance. Tableaux de bord interactifs pour la prise de décision.</p>
                         <div class="tags"><span class="tag">KPI</span><span class="tag">Dashboards</span><span class="tag">BI</span></div>
-                        <a href="projets/S2/projet5/s2-projet5.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet5/s2-projet5.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -716,7 +760,7 @@
                         <h4>Analyse de données & Reporting</h4>
                         <p>Outil dynamique d'analyse des tests PCR bovins pour le laboratoire Qualyse. Tableau de bord, classification des cheptels et statistiques.</p>
                         <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Tkinter</span></div>
-                        <a href="projets/S2/projet6/s2-projet6.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet6/s2-projet6.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -725,7 +769,7 @@
                         <h4>Portfolio</h4>
                         <p>Création de ce portfolio. Présentation synthétique des apprentissages, projets et évolution professionnelle.</p>
                         <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">Web</span><span class="tag">Portfolio</span></div>
-                        <a href="projets/S2/projet7/s2-projet7.html" class="project-link">→ Voir le détail</a>
+                        <a href="projets/S2/projet7/s2-projet7.html" class="project-link">Voir le projet <span class="project-link__icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
             </div>
