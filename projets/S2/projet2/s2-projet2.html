@@ -85,7 +85,8 @@
             border-radius: 8px; font-weight: 600; font-size: 15px; transition: opacity 0.2s;
         }
         .cta-button:hover { opacity: 0.85; }
-    </style>
+</style>
+<link rel="stylesheet" href="../../project-detail-theme.css">
 </head>
 <body>
     <div class="container">
@@ -93,34 +94,34 @@
         <a href="/#projects" class="back-link" onclick="sessionStorage.setItem('showS2', '1')">← Retour au portfolio</a>
 
         <div class="header">
-            <h1>📊 Échantillonnage et Estimation — Région Auvergne-Rhône-Alpes</h1>
+            <h1>Échantillonnage et Estimation — Région Auvergne-Rhône-Alpes</h1>
             <div class="meta">
                 <div class="meta-item">
-                    <strong>📅 Semestre</strong>
+                    <strong>Semestre</strong>
                     2e semestre — Mai 2026
                 </div>
                 <div class="meta-item">
-                    <strong>💼 Acquis professionnels</strong>
+                    <strong>Acquis professionnels</strong>
                     Statistique inférentielle, Sondage, R
                 </div>
                 <div class="meta-item">
-                    <strong>⏱️ Temps estimé</strong>
+                    <strong>Temps estimé</strong>
                     Environ 20 heures
                 </div>
                 <div class="meta-item">
-                    <strong>📊 Niveau de difficulté</strong>
+                    <strong>Niveau de difficulté</strong>
                     Moyen
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>🎯 Objectif du projet</h2>
+            <h2>Objectif du projet</h2>
             <p>Estimer le nombre total d'habitants d'Auvergne-Rhône-Alpes à partir d'un processus d'échantillonnage et évaluer la précision de cette estimation via des intervalles de confiance. Le projet compare le sondage aléatoire simple (SAS) et le sondage stratifié sur des données réelles INSEE de 4 037 communes. Une deuxième partie porte sur l'analyse d'une enquête étudiante sur la pratique sportive via des tests statistiques.</p>
         </div>
 
         <div class="section">
-            <h2>🛠️ Compétences mises en œuvre</h2>
+            <h2>Compétences mises en œuvre</h2>
             <ul>
                 <li>Chargement et nettoyage de données réelles sous R (fichier Excel INSEE)</li>
                 <li>Sondage aléatoire simple et stratifié, tirage sans remise</li>
@@ -132,7 +133,7 @@
         </div>
 
         <div class="section">
-            <h2>📋 Résultats & Livrables</h2>
+            <h2>Résultats & Livrables</h2>
             <p>Comparaison de trois méthodes sur 10 tirages : le SAS produit une marge d'erreur moyenne de 5,6M habitants, le stratifié à 4 strates de 4,8M, et le stratifié à 6 strates seulement 1,4M en isolant les grandes agglomérations. Pour l'enquête sportive, le sexe et le niveau d'études sont les deux variables significativement liées à la pratique du sport.</p>
             <div class="tags-grid">
                 <span class="tag">R</span>
@@ -145,27 +146,27 @@
         </div>
 
         <div class="section">
-            <h2>✨ Apprentissages clés</h2>
+            <h2>Apprentissages clés</h2>
             <p>Ce projet m'a permis de comprendre concrètement ce que signifie "estimer" une valeur inconnue et quantifier l'incertitude associée. Le plan de sondage est un choix méthodologique décisif : le SAS est simple mais inadapté aux populations hétérogènes. Passer de 4 à 6 strates en isolant les grandes agglomérations a réduit la marge d'erreur de 4,8M à 1,4M habitants, illustration très claire de l'importance du choix des seuils.</p>
         </div>
 
         <div class="section">
-            <h2>❤️ Ce que j'ai aimé</h2>
+            <h2>Ce que j'ai aimé</h2>
             <p>J'ai adoré ce projet ! Manipuler de vraies données INSEE, coder les sondages en R et rédiger un rapport complet, c'est exactement ce qui m'attire en Science des Données. Voir concrètement comment la méthode de sondage influence la précision des résultats était fascinant, et la comparaison des trois méthodes sur 10 tirages a rendu les concepts statistiques très tangibles.</p>
         </div>
 
         <div class="section">
-            <h2>😟 Défis rencontrés</h2>
+            <h2>Défis rencontrés</h2>
             <p>Implémenter correctement la variance de l'estimateur stratifié en R avec le taux de sondage a demandé une bonne maîtrise des formules du cours. La gestion des petites strates (seulement 15 communes pour la strate 6) nécessitait de forcer manuellement un minimum de 2 communes par strate tout en maintenant un total de 100.</p>
         </div>
 
         <div class="highlight-box">
-            <strong>💡 Contexte :</strong><br><br>
+            <strong>Contexte :</strong><br><br>
             Projet réalisé en binôme avec Oscar Makosso dans le cadre du cours de Statistique Inférentielle. Données INSEE sur les communes de France métropolitaine, enrichies d'une enquête sur la pratique sportive étudiante (374 répondants).
         </div>
 
         <div class="section">
-            <h2>📄 Rapport complet</h2>
+            <h2>Rapport complet</h2>
             <p>Le rapport complet avec le code R commenté, les graphiques et l'analyse des résultats.</p>
 
             <h3 style="font-size: 15px; color: #2563eb; margin: 20px 0 10px;">📋 Rapport</h3>
