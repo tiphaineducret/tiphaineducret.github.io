@@ -50,8 +50,8 @@ assert.doesNotMatch(
 );
 assert.match(
   portfolioCard,
-  /portfolio-screen/,
-  'la carte Portfolio doit montrer une miniature du site lui-même',
+  /portfolio-code/,
+  'la carte Portfolio doit montrer les coulisses HTML/CSS plutôt que le rendu final',
 );
 
 for (const previewPath of [
