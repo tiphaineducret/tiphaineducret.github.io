@@ -42,6 +42,18 @@ for (const [index, card] of projectCards.entries()) {
   );
 }
 
+const portfolioCard = projectCards.at(-1);
+assert.doesNotMatch(
+  portfolioCard,
+  /portrait-original-cutout/,
+  'la carte Portfolio ne doit pas répéter le portrait déjà présent sur l’accueil',
+);
+assert.match(
+  portfolioCard,
+  /portfolio-screen/,
+  'la carte Portfolio doit montrer une miniature du site lui-même',
+);
+
 for (const previewPath of [
   'projets/S1/projet1/excel-interface.png',
   'projets/S1/projet2/code-preview.jpg',
