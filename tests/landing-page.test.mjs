@@ -26,6 +26,36 @@ for (const projectPath of expectedProjectPages) {
   assert.ok(existsSync(join(root, projectPath)), `${projectPath} doit exister dans le dépôt publié`);
 }
 
+assert.doesNotMatch(
+  html,
+  /semester-project__visual--type/,
+  'les cartes projets ne doivent plus utiliser les aplats noirs génériques',
+);
+
+const projectCards = html.match(/<article class="semester-project">[\s\S]*?<\/article>/g) ?? [];
+assert.equal(projectCards.length, 13, 'les treize projets doivent avoir une carte visuelle');
+for (const [index, card] of projectCards.entries()) {
+  assert.match(
+    card,
+    /<a class="semester-project__visual[^>]*>[\s\S]*?(?:<img\s|semester-project__mockup)/,
+    `la carte projet ${index + 1} doit montrer un aperçu du livrable`,
+  );
+}
+
+for (const previewPath of [
+  'projets/S1/projet1/excel-interface.png',
+  'projets/S1/projet2/code-preview.jpg',
+  'projets/S1/projet3/tableau-bord-preview.jpg',
+  'projets/S1/projet4/rapport-preview.jpg',
+  'projets/S1/projet5/territoire-preview.jpg',
+  'projets/S1/projet6/enquete-preview.jpg',
+  'projets/S2/projet2/rapport-preview.jpg',
+  'projets/S2/projet3/rapport-immo-preview.jpg',
+]) {
+  assert.ok(existsSync(join(root, previewPath)), `${previewPath} doit exister pour illustrer sa carte`);
+  assert.match(html, new RegExp(`src="${previewPath.replaceAll('.', '\\.')}"`), `${previewPath} doit être affiché sur l’index`);
+}
+
 for (const assetPath of [
   'assets/cv-tiphaine-ducret.pdf',
   'assets/portrait-original-cutout.png',
